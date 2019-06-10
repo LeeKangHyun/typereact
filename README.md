@@ -47,6 +47,7 @@ let anyList: any[] = [ 1, true, "free" ]
 anyList[1] = 100
 
 // Void (어떤 타입의 부재도 전혀 없다)
+// undefined 또는 null만 할당할 수 있다.
 function warnUser(): void {
   alert('warnUser')
 }
@@ -69,7 +70,57 @@ function error(message: string): never {
 */
 let someValue: any = "this is a string"
 let strLength: number = (<string>someValue).length // 꺽쇠괄호 구문
-let strLength2: number = (someValue as string).length // as 구문 JSX와 함께 사용할 때는 as만 허용
+let strLength2: number = (someValue as string).length // as 구문, JSX와 함께 사용할 때는 as만 허용
+```
+
+### 인터페이스
+```typescript
+// 타입의 이름을 지정하는 역할
+interface LabelledValue {
+  label: string
+}
+
+function printLabel(labelledObj: LabelledValue) {
+  console.log(labelledObj.label)
+}
+
+// 선택적 프로퍼티 (Optional Properties)
+// 인터페이스에 포함되지 않는 프로퍼티의 사용을 방지할 수 있다.
+interface SquareConfig {
+  color?: string
+  width?: number
+}
+function createSquare(config: SquareConfig): {
+  color: string
+  area: number
+} {
+  let newSquare = { color: 'white', area: 100 }
+  if (config.color) {
+    newSquare.color = config.color
+  }
+  if (config.width) {
+    newSquare.area = config.width * config.width
+  }
+  return newSquare
+}
+
+// 읽기 전용 프로퍼티 (Readonly properties)
+interface Point {
+  readonly x: number
+  readonly y: number
+}
+
+let p1: Point = { x: 10, y: 20 }
+p1.x = 5 // Error
+
+let a: number[] = [1, 2, 3, 4]
+let ro: ReadonlyArray<number> = a
+
+a = ro as number[]
+a = <Array>a
+// 할당 후 바꿀 수 없다.
+// 타입 단언을 통해 오버라이드 할 수 있다.
+
 ```
 
 **참고 사이트**
