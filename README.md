@@ -327,6 +327,187 @@ class Location {
 
 ```
 
+### 클래스
+> 클래스 몸체에 메소드만을 포함할 수 있다.
+
+| 접근 가능성 | public | protected | private |
+| --- | --- | --- | --- |
+| 클래스 내부 | 가능 | 가능 | 가능 |
+| 자식 클래스 내부 | 가능 | 가능 | 불가능 |
+| 클래스 인스턴스 | 가능 | 불가능 | 불가능 |
+
+```typescript
+// Basic Class
+class Greeter {
+  greeting: string
+  constructor(message: string) {
+    this.greeting = message
+  }
+  
+  greet() {
+    return "Hello, " + this.greeting
+  }
+}
+
+let greeter = new Greeter("world")
+
+// Inheritance
+/*
+* this에 있는 프로퍼티에 접근하기 전에 항상 super()를 호출해야 한다.
+*/
+class Animal {
+  name: string
+  constructor(theName: string) {
+    this.name = theName
+  }
+  move(disatanceInMeters: number = 0) {
+    console.log(this.name, " ", disatanceInMeters)
+  }
+}
+
+class Snake extends Animal {
+  constructor(name: string) {
+    super(name) // 기본 클래스의 생성자를 실행할 super() 를 호출해야한다
+  }
+  move(distanceInMeters = 5) {
+    super.move(distanceInMeters)
+  }
+}
+
+class Horse extends Animal {
+  constructor(name: string) {
+    super(name)
+  }
+  move(distanceInMeters = 45) {
+    super.move(distanceInMeters)
+  }
+}
+
+let sam = new Snake('Sam')
+
+// tom은 Animal로 선언되었지만 Horse의 값을 가지므로 Horse의 오버라이딩 메서드가 호출된다.
+let tom: Animal = new Horse('Tom')
+
+sam.move()
+tom.move(34)
+
+// public (Public by default)
+// 멤버들에 자유롭게 접근할 수 있다.
+
+// private
+class Animal {
+  private name: string
+  constructor(theName: string) {
+    this.name = theName
+  }
+}
+
+new Animal("cat").name // Error 'name'은 private이다
+
+class Rhino extends Animal {
+  constructor() {
+    super("Rhino")
+  }
+}
+
+// Animal과 Rhino는 Animal의 private 의 형태를 공유하기 때문에 호환 된다.
+
+// protected
+class Person {
+  protected name: string
+  constructor(name: string) {
+    this.name = name
+  }
+}
+
+class Employee extends Person {
+  private department: string
+  constructor(name: string, department: string) {
+    super(name)
+    this.department = department
+  }
+  
+  public getElevtorPitch() {
+    return `${this.name} ${this.department}`
+  }
+}
+
+let howard = new Employee("Howard", "Sales")
+
+// 생성자 또한 protected로 표시될 수 있다.
+// 인스턴스화할 수는 없지만 확장될 수는 있다.
+class Person {
+  protected name: string
+  protected constructor(theName: string) {
+    this.name = theName
+  }
+}
+
+let john = new Person('John') // Error Person의 생성자는 protected이다
+
+// 매개변수 프로퍼티
+class Octopus {
+  readonly numberOfLegs: number = 8
+  constructor(readonly name: string) {
+    
+  }
+}
+
+// 접근자
+// get, set은 자동적으로 readonly
+// .d.ts 파일을 생성할 때 유용
+
+let passcode = 'secret'
+
+class Employee {
+  private _fullName: string
+  
+  get fullName(): string {
+    return this._fullName
+  }
+  
+  set fullName(newName: string) {
+    if (passcode && passcode === 'secret') {
+      this._fullName = newName
+    } else {
+      console.log('Error')
+    }
+  }
+}
+
+let employee = new Employee()
+employee.fullName = 'Bob'
+if (employee.fullName) {
+  console.log(employee.fullName)
+}
+
+// 정적 프로퍼티
+// this.를 추가하는 것과 비슷하게 스태틱 접근자 앞에 클래스명을 추가한다.
+class Grid {
+  static origin = {x: 0, y: 0};
+  calculateDistanceFromOrigin(point: {x: number; y: number;}) {
+    let xDist = (point.x - Grid.origin.x);
+    let yDist = (point.y - Grid.origin.y);
+    return Math.sqrt(xDist * xDist + yDist * yDist) / this.scale;
+  }
+  constructor (public scale: number) { }
+}
+
+let grid1 = new Grid(1.0);  // 1x scale
+let grid2 = new Grid(5.0);  // 5x scale
+
+console.log(grid1.calculateDistanceFromOrigin({x: 10, y: 10}));
+console.log(grid2.calculateDistanceFromOrigin({x: 10, y: 10}));
+
+// 추상 클래스
+// 다른 클래스가 파생될 수 있는 기본 클래스
+// 인터페이스와 달리 추상 클래스는 멤버에 대한 구현 세부 정보를 포함할 수 있다.
+// 추상 메서드는 파생된 클래스에서 구현해야 한다.
+
+
+
+```
+
 **참고 사이트**
 1. [TypeScript-kr](https://typescript-kr.github.io)
 2. [https://infoscis.github.io](https://infoscis.github.io)
