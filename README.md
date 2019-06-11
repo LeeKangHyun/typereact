@@ -226,6 +226,105 @@ function createClock(ctor: ClockConstructor, hour: number, minute: number): Cloc
   return new ctor(hour, minute)
 }
 
+class DigitalClock implements ClockInterface {
+  constructor(h: number, m: number) {}
+  tick() {
+    console.log("beep beep", this.h, this.m)
+  }
+}
+
+
+class AnalogClock implements ClockInterface {
+  constructor(h: number, m: number) {}
+  tick() {
+    console.log("tick tick", this.h, this.m)
+  }
+}
+
+let digital = createClock(DigitalClock, 12, 17)
+let analog = createClock(AnalogClock, 7, 32)
+
+// 인터페이스 확장 Extending Interfaces
+// 클래스처럼 인터페이스도 확장 가능
+interface Shape {
+  color: string
+}
+
+interface Square extends Shape {
+  sideLength: number
+}
+
+let square = <Square>{}
+square.color = "blue"
+square.sideLength = 10
+
+interface PenStroke {
+  penWidth: number
+}
+
+interface Square extends Shape, PenStroke {
+  sideLength: number
+}
+
+// 하이브리드 타입 Hybrid Types
+interface Counter {
+  (start: number): string
+  interval: number
+  reset(): void
+}
+
+function getCounter(): Counter {
+  let counter = <Counter>function(start) {}
+  counter.interval = 123
+  counter.reset = function() {}
+  
+  return counter
+}
+
+let c = getCounter()
+c(10)
+c.reset()
+c.interval = 5.0
+
+// 인터페이스 확장 클래스 Interfaces Extending Classes
+// 인터페이스 타입이 클래스 타입을 확장하면 해당 클래스의 멤버들을 상속하지만 구현을 상속하지는 않는다.
+
+// private 또는 protected 멤버가 있는 클래스를 확장하는 인터페이스를 생성하면
+// 해당 인터페이스 타입은 해당 클래스 또는 해당 클래스의 서브 클래스에서만 구현할 수 있다.
+
+class Control {
+  private state: any
+}
+
+// Control의 모든 멤버가 포함
+// state는 private이기 때문에 Control의 자식만 SelectableControl을 구현가능
+interface SelectableControl extends Control {
+  select(): void
+}
+
+class Button extends Control implements SelectableControl {
+  select() {
+    
+  }
+}
+
+class TextBox extends Control {
+  select() {
+    
+  }
+}
+
+// Error Image타입의 state 프로퍼티가 없습니다.
+class Image implements SelectableControl {
+  select() {
+    
+  }
+}
+
+class Location {
+  
+}
+
 ```
 
 **참고 사이트**
