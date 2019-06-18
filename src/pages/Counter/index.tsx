@@ -1,23 +1,17 @@
 import * as React from 'react'
 
-import withController from './Controller'
+import withController, { InjectedCounterProps } from './Controller'
 
-interface Props {
-  value: number
-  increment(): void
-  decrement(): void
-}
-
-const CounterComponent: React.FC<Props> = ({
+const CounterComponent: React.FC<InjectedCounterProps> = ({
   value,
-  increment,
-  decrement
+  onIncrement,
+  onDecrement
 }) => {
   return (
     <div>
-      <button onClick={decrement}>-</button>
+      <button onClick={onDecrement}>-</button>
       {value}
-      <button onClick={increment}>+</button>
+      <button onClick={onIncrement}>+</button>
     </div>
   )
 }
