@@ -1,51 +1,73 @@
 import * as React from 'react'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
 
-import withController, { InjectedTodoListProps } from './Controller'
+import { TodoItemDataParams, actionCreators as todosActions } from 'store/modules/Todos'
+import { StoreState } from 'store/modules'
+
+import TodoListComponent from './Component/TodoList'
+
+export interface InjectedTodoListProps {
+  input: string
+  todoItems: TodoItemDataParams[]
+  onCreate(event: any): void
+  onChange(event: any): void
+  onToggle(id: number): void
+  onRemove(id: number): void
+}
 
 interface Props {
-  text: string
-  done: boolean
-  onToggle(): void
-  onRemove(): void
+  todoItems: TodoItemDataParams[]
+  input: string
+  TodosActions: typeof todosActions
 }
 
-const TodoItem: React.FC<Props> = ({
-  text, done,
-  onToggle, onRemove
-}) => {
-  return (
-    <li>
-      <b onClick={onToggle} style={{textDecoration: done ? 'line-through' : 'none'}}>{text}</b>
-      <span style={{ all: 'unset', marginLeft: '0.5rem' }} onClick={onRemove}>[ 지우기 ]</span>
-    </li>
-  )
+class TodoList extends React.Component<Props> {
+  onCreate = (event: React.FormEvent<HTMLFormElement>): void => {
+    event.preventDefault()
+    const { TodosActions, input } = this.props
+    TodosActions.create(input)
+  }
+  
+  onChange = (event: React.FormEvent<HTMLInputElement>): void => {
+    const { value } = event.currentTarget
+    const { TodosActions } = this.props
+    if (value === '') return
+    TodosActions.changeInput(value)
+  }
+  
+  
+  onToggle = (id: number): void => {
+    const { TodosActions } = this.props
+    TodosActions.toggle(id)
+  }
+  
+  onRemove = (id: number): void => {
+    const { TodosActions} = this.props
+    TodosActions.remove(id)
+  }
+  
+  render() {
+    const { todoItems, input } = this.props
+    return (
+      <TodoListComponent
+        todoItems = { todoItems }
+        input = { input }
+        onCreate = { this.onCreate }
+        onToggle = { this.onToggle }
+        onChange = { this.onChange }
+        onRemove = { this.onRemove }
+      />
+    )
+  }
 }
 
-const TodoListComponent: React.FC<InjectedTodoListProps> = ({
-  todoItems, input,
-  onSubmit, onChange, onToggle, onRemove
-}) => {
-  const todoItemList: React.ReactElement[] = todoItems.map(todo => (
-    <TodoItem
-      key={todo.id}
-      text={todo.text}
-      done={todo.done}
-      onToggle={() => onToggle(todo.id)}
-      onRemove={() => onRemove(todo.id)}
-    />
-  ))
-  return (
-    <div>
-      <h1>TODO List</h1>
-      <form onSubmit={onSubmit}>
-        <input onChange={onChange} value={input} type="text" />
-        <button type="submit">추가</button>
-      </form>
-      <ul>
-        {todoItemList}
-      </ul>
-    </div>
-  )
-}
-
-export default withController(TodoListComponent)
+export default connect(
+  ({ todos }: StoreState ) => ({
+    input: todos.input,
+    todoItems: todos.todoItems
+  }),
+  (dispatch) => ({
+    TodosActions: bindActionCreators(todosActions, dispatch),
+  })
+)(TodoList);

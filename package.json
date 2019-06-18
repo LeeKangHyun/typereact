@@ -3,8 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@types/react-redux": "^7.1.0",
-    "@types/redux": "^3.6.0",
     "query-string": "^6.7.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -12,6 +10,7 @@
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
     "redux": "^4.0.1",
+    "redux-actions": "^2.6.5",
     "typescript": "^3.5.1",
     "utility-types": "^3.7.0"
   },
@@ -41,6 +40,10 @@
     "@types/query-string": "^6.3.0",
     "@types/react": "^16.8.19",
     "@types/react-dom": "^16.8.4",
-    "@types/react-router-dom": "^4.3.3"
+    "@types/react-redux": "^7.1.0",
+    "@types/react-router-dom": "^4.3.3",
+    "@types/redux": "^3.6.0",
+    "@types/redux-actions": "^2.6.1",
+    "redux-devtools-extension": "^2.13.8"
   }
 }
