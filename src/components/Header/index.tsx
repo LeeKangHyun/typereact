@@ -4,9 +4,7 @@ import { Link } from 'react-router-dom'
 
 import withController from './Controller'
 
-interface Props {
-
-}
+interface Props {}
 
 const HeaderComponent: React.FC<Props> = () => {
   return (
@@ -23,6 +21,9 @@ const HeaderComponent: React.FC<Props> = () => {
         </li>
         <li>
           <Link to="/counter">Counter</Link>
+        </li>
+        <li>
+          <Link to="/todo">TodoList</Link>
         </li>
       </ul>
     </nav>

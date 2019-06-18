@@ -6,6 +6,7 @@ const Header = React.lazy(() => import(/* webpackChunkName: 'Header' */ 'compone
 const Index = React.lazy(() => import(/* webpackChunkName: 'MainIndex' */ 'pages/Main'))
 const Product = React.lazy(() => import(/* webpackChunkName: 'Product' */ 'pages/Products'))
 const Counter = React.lazy(() => import(/* webpackChunkName: 'Counter' */ 'pages/Counter'))
+const Todo = React.lazy(() => import(/* webpackChunkName: 'TodoList' */ 'pages/TodoList'))
 
 export default function AppRouter() {
   return (
@@ -17,6 +18,7 @@ export default function AppRouter() {
             <Route path="/" exact component={Index} />
             <Route path="/products/:id" component={Product} />
             <Route path="/counter" component={Counter} />
+            <Route path="/todo" component={Todo} />
           </Switch>
         </div>
       </Suspense>
