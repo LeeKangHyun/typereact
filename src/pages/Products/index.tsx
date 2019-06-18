@@ -5,7 +5,9 @@ import withController from './Controller'
 
 type TParams = { id: string }
 
-const Product = ({ match }: RouteComponentProps<TParams>) => {
+interface Props extends RouteComponentProps<TParams> {}
+
+const Product: React.FC<Props> = ({ match }: RouteComponentProps<TParams>) => {
   return <h2>Products page {match.params.id}</h2>
 }
 

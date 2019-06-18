@@ -1,6 +1,10 @@
 import * as React from 'react'
 
-const MainComponent = () => {
+interface Props {
+
+}
+
+const MainComponent: React.FC<Props> = () => {
   return (
     <div>
       Hello World!

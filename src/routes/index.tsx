@@ -1,30 +1,25 @@
 import * as React from 'react'
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
+import { Suspense } from 'react'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
-import Index from 'components/Main'
-import Product from 'components/Products'
+const Header = React.lazy(() => import(/* webpackChunkName: 'Header' */ 'components/Header'))
+const Index = React.lazy(() => import(/* webpackChunkName: 'MainIndex' */ 'pages/Main'))
+const Product = React.lazy(() => import(/* webpackChunkName: 'Product' */ 'pages/Products'))
+const Counter = React.lazy(() => import(/* webpackChunkName: 'Counter' */ 'pages/Counter'))
 
 export default function AppRouter() {
   return (
     <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/products/1">First Product</Link>
-            </li>
-            <li>
-              <Link to="/products/2">Second Product</Link>
-            </li>
-          </ul>
-        </nav>
-        
-        <Route path="/" exact component={Index} />
-        <Route path="/products/:id" component={Product} />
-      </div>
+      <Suspense fallback={<div>Loading...</div>}>
+        <div>
+          <Header />
+          <Switch>
+            <Route path="/" exact component={Index} />
+            <Route path="/products/:id" component={Product} />
+            <Route path="/counter" component={Counter} />
+          </Switch>
+        </div>
+      </Suspense>
     </Router>
   )
 }
