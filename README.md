@@ -504,8 +504,276 @@ console.log(grid2.calculateDistanceFromOrigin({x: 10, y: 10}));
 // 인터페이스와 달리 추상 클래스는 멤버에 대한 구현 세부 정보를 포함할 수 있다.
 // 추상 메서드는 파생된 클래스에서 구현해야 한다.
 
+abstract class Department {
+  constructor(public name: string) {}
+  
+  printName(): void {
+    console.log('Department name: ' + this.name)
+  }
+  
+  abstract printMeeting(): void
+}
 
+class AccountingDepartment extends Department {
+  constructor(public name: string) {
+    super(name) // 파생 된 클래스의 생성자는 super()를 호출해야한다.
+  }
+  
+  printMeeting(): void{
+    console.log('Account')
+  }
+  
+  generateReports(): void {
+    console.log('Genereting')
+  }
+}
 
+let department: Department
+// department = new Department() // Error 추상클래스의 인스턴스를 생성할 수 없다.
+department = new AccountingDepartment('Hello') // 
+department.printName()
+department.printMeeting()
+department.generateReports() // Error abstract 타입으로 선언된 메서드가 존재하지 않는다.
+
+// 고급 기법 Advanced Techniques
+
+// 생성자 함수
+// TypeScript 에서 클래스를 선언하면 실제로 여러 선언이 동시에 생서된다.
+// 클래스의 모든 정적 멤버도 포함.
+// instatnce
+class Greeter {
+  constructor(public greeting: string) {}
+  
+  greet() {
+    return 'Hello, ' + this.greeting
+  }
+}
+
+let greeter: Greeter // Greeter 클래스의 인스턴스 타입으로 Greeter 를 사용
+greeter = new Greeter('World')
+console.log(greeter.greet())
+
+// 위 TS를 JS로 변환한 모습
+let Greeter = (function() {
+  function Greeter(message) {
+    this.greeting = message
+  }
+  Greeter.prototype.greet = function() {
+    return "Hello, " + this.greeting
+  }
+  return Greeter
+})()
+
+let greeter
+greeter = new Greeter('World') // 클래스의 인스턴스를 얻는다.
+console.log(greeter.greet())
+
+class Greeter {
+  static standardGreeting = "Hello, World"
+  constructor(public greeting?: string) {}
+  greet() {
+    if (this.greeting) {
+      return "Hello, " + this.greeting
+    } else {
+      return Greeter.standardGreeting
+    }
+  }
+}
+
+let greeter1: Greeter
+greeter1 = new Greeter()
+console.log(greeter1.greet())
+
+let greeterMaker: typeof Greeter = Greeter 
+// 클래스 자체를 보유하거나 다른 방법으로 생성자 함수를 나타낸다, 인스턴스 유형이 아닌 Greeter 클래스 자체의 타입 을 사용한다.
+greeterMaker.standardGreeting = "Hey World"
+
+let greeter2: Greeter = new greeterMaker()
+console.log(greeter2.greet())
+
+// 클래스를 인터페이스로 사용
+/*
+* 클래스 선언은 클래스의 인스턴스를 나타내는 타입과 생성자 함수 두가지를 작성 해야 한다.
+* */
+class Point {
+  x: number
+  y: number
+}
+
+interface Point3d extends Point {
+  z: number
+}
+
+let point3d: Point3d = {
+  x: 1,
+  y: 2,
+  z: 3
+}
+```
+
+### 함수
+> 기명 함수 또는 익명 함수로 만들 수 있다.
+> 함수는 함수 본문 외부의 변수를 참조할 수 있다. 변수를 Capture 한다 라고 말한다.
+
+```typescript
+// 함수의 타입
+function add(x: number, y: number): number {
+  return x + y
+}
+
+// full function type
+let myAdd = function(x: number, y: number): number { return x + y }
+
+// 파라미터 타입이 있으면 함수 타입에 파라미터를 지정하는 이름에 상관없이 함수의 유효한 타입으로 간주된다.
+let myAdd2: (baseValue: number, increment: number) => number =
+  function(x: number, y: number): number { return x + y }
+// 파라미터와 리턴 타입 사이에 굵은 화살표 (=>)를 사용하여 리턴 타입을 명확하게 한다. 함수타입의 필수 부분
+// Capture된 변수는 타입에 반영되지 않는다.
+  
+// 타입 추정 "컨텍스트 타입 지정"
+let myAdd3: (baseValue: number, increment: number) => number =
+  function(x, y) { return x + y }
+  
+// 타입 오버로드
+function pickCard(x: { suit: string; card: number; }[]): number
+function pickCard(x: number): { suit: string; card: number; }
+function pickCard(x): any {
+  return x
+}
+```
+
+### 제네릭
+> 단일 타입이 아닌 다양한 타입을 처리할 수 있는 컴포넌트를 만드는 것
+
+```typescript
+// 타입 변수 사용. 값이 아닌 타입에서 작동하는 특별한 종류의 변수
+
+function identity<T>(arg: T): T { // T는 함수 사용자가 제공한 타입을 캡처하여 나중에 사용할 수 있도록 한다.
+  return arg
+}
+
+/*
+* 제네릭 함수를 호출하는 두 가지 방법
+* 1. Type 파라미터를 포함한 모든 파라미터를 함수에 전달
+* 2. 파라미터 타입 추론
+ */
+
+//1) T를 string으로 명시적 설정, ()보다는 파라미터를 중심으로 <>를 사용
+let output = identity<string>("string")
+
+//2) 전달하는 파라미터의 타입에 따라 자동으로 T의 값을 설정
+let output = identity("string")
+
+// ** 
+function loggingIdentity<T>(arg: T[]): T[] {
+  console.log(arg.length)
+  return arg
+}
+
+function loggingIdentity<T>(arg: Array<T>): Array<T> {
+  console.log(arg.length)
+  return arg
+}
+// **
+
+// 제네릭 타입
+let myIdentity: <T>(arg: T) => T = identity
+
+// 타입 변수의 수와 타입 변수의 사용이 일치하다면 제네릭 타입 매개변수에 다른 이름을 사용할 수 있다.
+let myIdentity: <U>(arg: U) => U = identity
+
+// 제네릭 타입을 객체 리터럴 타입의 호출 형식으로도 사용할 수 있다.
+let myIdentity: {<T>(arg: T): T} = identity
+
+// 인터페이스로 작성해서 할 수 있다.
+interface GenericIdentityFn {
+  <T>(arg: T): T
+}
+
+let myIdentity: GenericIdentityFn = identity
+
+// 제네릭 매개변수를 전체 인터페이스의 매개변수로 이동
+interface GenericIdentityFn<T> {
+  (art: T): T
+}
+
+let myIdentity: GenericIdentityFn<number> = identity
+
+// 제네릭 제약조건
+// 대신 모든 필수 프로퍼티가 있는 타입의 값을 전달해야 한다.
+interface Lengthwise {
+  length: number
+}
+
+function loggingIdentity<T extends Lengthwise>(arg: T): T {
+  console.log(arg.length)
+  return arg
+}
+
+// 제네릭 제약조건에서 타입 매개변수 사용
+function getProperty<T, K extends keyof T>(obj: T, key: K) {
+  return obj[key]
+}
+
+let x = { a: 1, b: 2, c: 3, d: 4 }
+getProperty(x, "a") // 오류 없음
+getProperty(x, "m") // 오류
+
+// 제네릭에서 클래스 타입 사용
+// 팩토리를 생성할 때 생성자 함수를 사용하여 클래스 타입을 참조해야 한다.
+function create<T>(c: {new(): T}): T {
+  return new c()
+}
+
+class BeeKeeper {
+  hasMask: boolean;
+}
+
+class ZooKeeper {
+  nametag: string;
+}
+
+class Animal {
+  numLegs: number;
+}
+
+class Bee extends Animal {
+  keeper: BeeKeeper;
+}
+
+class Lion extends Animal {
+  keeper: ZooKeeper;
+}
+
+function createInstance<A extends Animal>(c: new () => A): A {
+  return new c();
+}
+
+createInstance(Lion).keeper.nametag;  // 타입 체크!
+createInstance(Bee).keeper.hasMask;   // 타입 체크!
+```
+
+### 열거형(Enums)
+> 숫자 및 문자열 기반 열거형을 모두 제공
+
+```typescript
+enum Direction {
+  up = 1,
+  down,
+  left,
+  right
+}
+
+enum Response {
+  No = 0,
+  Yes = 1
+}
+
+function respond(recipient: string, message: Response): void {}
+
+respond("PC", Response.Yes)
+
+// 숫자 열거형은 계산된, 상수 멤버에 혼합될 수 있다.
 ```
 
 **참고 사이트**
