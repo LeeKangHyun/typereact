@@ -211,6 +211,7 @@ interface ClockConstructor {
 class Clock implements ClockConstructor {
   currentTime: Date
   constructor(h: number, m: number) {}
+  
 }
 
 // 해결방법은 클래스의 정적인 측면에서 직접 작업해야 한다.
@@ -774,6 +775,42 @@ function respond(recipient: string, message: Response): void {}
 respond("PC", Response.Yes)
 
 // 숫자 열거형은 계산된, 상수 멤버에 혼합될 수 있다.
+
+enum E {
+  A = getSomeValue(),
+  B, // Error A는 상수로 초기화 되지 않았으므로 B에는 초기화가 필요하다.
+}
+```
+
+### 타입 호환성
+```typescript
+// y가 적어도 x와 같은 멤버를 가지고 있다면 x는 y와 호환된다.
+interface Named {
+  name: string
+}
+
+let x: Named
+// y의 추론된 타입은 { name: string; location: string }
+let y = { name: "Alice", location: "Seattle" }
+x = y
+
+function greet(n: Named) {
+  alert("Hello, " + n.name)
+}
+greet(y)
+
+// 두 함수 비교
+let x = (a: number) => 0
+let y = (b: number, s: string) => 0
+
+y = x // 좋아요
+x = y // 오류
+// x가 y에 할당될 수 있는지 
+
+let x = () => ({ name: "Alice" })
+let y = () => ({ name: "Alice", location: "Seattle" })
+x = y // 좋아요
+y = x // x에 location 프로퍼티가 없기 때문에 오류
 ```
 
 **참고 사이트**
