@@ -1,7 +1,7 @@
-import * as express from 'express'
-import * as path from 'path'
-import * as morgan from 'morgan'
-import * as http from 'http'
+import express from 'express'
+import path from 'path'
+import morgan from 'morgan'
+import http from 'http'
 
 import API from './routes/api'
 
