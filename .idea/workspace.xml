@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cad15403-4d26-4073-9dcf-70b97c8c32bf" name="Default Changelist" comment="" />
+    <list default="true" id="cad15403-4d26-4073-9dcf-70b97c8c32bf" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/server/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/api.ts" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -16,20 +19,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/index.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+            <state relative-caret-position="75">
+              <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/routes/api.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
+            <state relative-caret-position="75">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -102,8 +105,8 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/test.tsx" />
         <option value="$PROJECT_DIR$/src/README.md" />
-        <option value="$PROJECT_DIR$/server/routes/api.ts" />
         <option value="$PROJECT_DIR$/server/index.ts" />
+        <option value="$PROJECT_DIR$/server/routes/api.ts" />
       </list>
     </option>
   </component>
@@ -134,6 +137,24 @@
             <path>
               <item name="typereact" type="b2602c69:ProjectViewProjectNode" />
               <item name="typereact" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="typereact" type="b2602c69:ProjectViewProjectNode" />
+              <item name="typereact" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="typereact" type="b2602c69:ProjectViewProjectNode" />
+              <item name="typereact" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+              <item name="@types" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="typereact" type="b2602c69:ProjectViewProjectNode" />
+              <item name="typereact" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+              <item name="@types" type="462c0819:PsiDirectoryNode" />
+              <item name="morgan" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="typereact" type="b2602c69:ProjectViewProjectNode" />
@@ -363,7 +384,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69473000" />
+    <option name="totallyTimeSpent" value="69635000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
@@ -455,7 +476,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="typescript and cra, express" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/Products/i.ts" />
     <entry file="file://$PROJECT_DIR$/node_modules/@types/react-router-dom/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -633,13 +653,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/tsconfig.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -1129,17 +1142,67 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/routes/api.ts">
+    <entry file="file://$PROJECT_DIR$/server/tsconfig.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
+        <state relative-caret-position="400">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@types/morgan/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="220" column="9" selection-start-line="220" selection-start-column="9" selection-end-line="220" selection-end-column="9" />
+          <folding>
+            <element signature="n#morgan#0" />
+            <element signature="n#!!block;n#TokenIndexer#0;n#morgan#0" />
+            <element signature="n#!!doc;n#Morgan#0;n#morgan#0" />
+            <element signature="n#!!block;n#Morgan#0;n#morgan#0" />
+            <element signature="e#772#1108#0" />
+            <element signature="e#1186#1437#0" />
+            <element signature="e#1519#1742#0" />
+            <element signature="e#1822#2173#0" />
+            <element signature="e#2251#2499#0" />
+            <element signature="e#2579#2750#0" />
+            <element signature="e#2829#3096#0" />
+            <element signature="n#!!doc;n#token#0;n#!!block;n#Morgan#0;n#morgan#0" />
+            <element signature="n#!!doc;n#format#0;n#!!block;n#Morgan#0;n#morgan#0" />
+            <element signature="n#!!doc;n#format#1;n#!!block;n#Morgan#0;n#morgan#0" />
+            <element signature="n#!!doc;n#compile#0;n#!!block;n#Morgan#0;n#morgan#0" />
+            <element signature="n#!!doc;n#token#0;n#morgan#0" />
+            <element signature="n#!!doc;n#format#0;n#morgan#0" />
+            <element signature="n#!!doc;n#format#1;n#morgan#0" />
+            <element signature="n#!!doc;n#compile#0;n#morgan#0" />
+            <element signature="n#!!block;n#StreamOptions#0;n#morgan#0" />
+            <element signature="n#!!doc;n#write#0;n#!!block;n#StreamOptions#0;n#morgan#0" />
+            <element signature="n#!!doc;n#Options#0;n#morgan#0" />
+            <element signature="n#!!block;n#Options#0;n#morgan#0" />
+            <element signature="n#!!doc;n#buffer#0;n#!!block;n#Options#0;n#morgan#0" />
+            <element signature="n#!!doc;n#immediate#0;n#!!block;n#Options#0;n#morgan#0" />
+            <element signature="n#!!doc;n#skip#0;n#!!block;n#Options#0;n#morgan#0" />
+            <element signature="n#!!doc;n#stream#0;n#!!block;n#Options#0;n#morgan#0" />
+            <element signature="n#!!doc;n#morgan#1" />
+            <element signature="n#!!doc;n#morgan#2" />
+            <element signature="n#!!doc;n#morgan#3" />
+            <element signature="n#!!doc;n#morgan#4" />
+            <element signature="n#!!doc;n#morgan#5" />
+            <element signature="n#!!doc;n#morgan#6" />
+            <element signature="n#!!doc;n#morgan#7" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/index.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        <state relative-caret-position="75">
+          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/routes/api.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
