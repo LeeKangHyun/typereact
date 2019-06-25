@@ -1,19 +1,33 @@
-import * as React from 'react'
-import { Suspense } from 'react'
+import React, { Suspense, lazy } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import styled, { createGlobalStyle } from 'styled-components'
+import { reset } from 'styled-reset'
 
-const Header = React.lazy(() => import(/* webpackChunkName: 'Header' */ 'components/Header'))
-const Main = React.lazy(() => import(/* webpackChunkName: 'Main' */ 'pages/Main'))
-const Product = React.lazy(() => import(/* webpackChunkName: 'Product' */ 'pages/Products'))
-const Counter = React.lazy(() => import(/* webpackChunkName: 'Counter' */ 'pages/Counter'))
-const TodoList = React.lazy(() => import(/* webpackChunkName: 'TodoList' */ 'pages/TodoList'))
-const Chat = React.lazy(() => import(/* webpackChunkName: 'Chat' */ 'pages/Chat'))
+const Header = lazy(() => import(/* webpackChunkName: 'Header' */ 'components/Header'))
+const Main = lazy(() => import(/* webpackChunkName: 'Main' */ 'pages/Main'))
+const Product = lazy(() => import(/* webpackChunkName: 'Product' */ 'pages/Products'))
+const Counter = lazy(() => import(/* webpackChunkName: 'Counter' */ 'pages/Counter'))
+const TodoList = lazy(() => import(/* webpackChunkName: 'TodoList' */ 'pages/TodoList'))
+const Chat = lazy(() => import(/* webpackChunkName: 'Chat' */ 'pages/Chat'))
+
+const Wrap = styled.div``
+
+const GlobalStyled = createGlobalStyle`
+  ${reset}
+  * {
+    box-sizing: border-box;
+  }
+  a {
+    text-decoration: none;
+  }
+`
 
 export default function AppRouter(): JSX.Element {
   return (
     <Router>
       <Suspense fallback={<div>Loading...</div>}>
-        <div>
+        <Wrap>
+          <GlobalStyled />
           <Header />
           <Switch>
             <Route path="/" exact component={Main} />
@@ -22,7 +36,7 @@ export default function AppRouter(): JSX.Element {
             <Route path="/todo" component={TodoList} />
             <Route path="/chat" component={Chat} />
           </Switch>
-        </div>
+        </Wrap>
       </Suspense>
     </Router>
   )

@@ -22,6 +22,6 @@ app.all('/*', (req, res) => {
 })
 
 const server = http.createServer(app)
-server.listen(app.get('port'), function() {
+server.listen(app.get('port'), () => {
   console.log('Express Listening on Port ' + app.get('port'))
 })

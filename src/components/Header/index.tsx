@@ -1,35 +1,37 @@
 import * as React from 'react'
 import { compose } from 'redux'
-import { Link } from 'react-router-dom'
 
 import withController from './Controller'
+
+import {
+  Header,
+  Link,
+  Ul, Li
+} from './styled'
 
 interface Props {}
 
 const HeaderComponent: React.FC<Props> = () => {
   return (
-    <nav>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/products/1">First Product</Link>
-        </li>
-        <li>
-          <Link to="/products/2">Second Product</Link>
-        </li>
-        <li>
-          <Link to="/counter">Counter</Link>
-        </li>
-        <li>
+    <Header>
+      <Ul>
+        <Li isLeft={true}>
+          <Link to="/">홈</Link>
+        </Li>
+        <Li>
+          <Link to="/products">Product</Link>
+        </Li>
+        <Li>
+          <Link to="/counter">카운터</Link>
+        </Li>
+        <Li>
           <Link to="/todo">TodoList</Link>
-        </li>
-        <li>
-          <Link to="/chat">Chat</Link>
-        </li>
-      </ul>
-    </nav>
+        </Li>
+        <Li>
+          <Link to="/chat">채팅</Link>
+        </Li>
+      </Ul>
+    </Header>
   )
 }
 

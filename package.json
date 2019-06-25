@@ -58,6 +58,8 @@
     "sass-loader": "7.1.0",
     "semver": "6.0.0",
     "style-loader": "0.23.1",
+    "styled-components": "^4.3.2",
+    "styled-reset": "^2.0.16",
     "terser-webpack-plugin": "1.2.3",
     "ts-pnp": "1.1.2",
     "typescript": "^3.4.5",
@@ -80,6 +82,8 @@
     "@types/react-router-dom": "^4.3.3",
     "@types/redux": "^3.6.0",
     "@types/redux-actions": "^2.6.1",
+    "@types/styled-components": "^4.1.16",
+    "babel-plugin-styled-components": "^1.10.2",
     "concurrently": "^4.1.0",
     "redux-devtools-extension": "^2.13.8"
   },
@@ -155,6 +159,9 @@
   "babel": {
     "presets": [
       "react-app"
+    ],
+    "plugins": [
+      "babel-plugin-styled-components"
     ]
   },
   "proxy": "http://localhost:3001/api"
