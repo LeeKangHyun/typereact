@@ -204,6 +204,7 @@ class Clock implements ClockInterface {
 // Construct Signature를 사용하여 인터페이스를 만들고 이 인터페이스를
 // implements 하는 클래스를 만들려고 하면 오류가 발생
 // 클래스가 인터페이스를 구현할 때 클래스의 인스턴스 측면만 검사되기 때문에.!
+// implements 뒤에 인터페이스를 선언하면 해당 클래스는 지정된 인터페이스를 반드시 구현하여야 한다.
 interface ClockConstructor {
   new (hour: number, minute: number)
 }
@@ -645,6 +646,7 @@ function pickCard(x): any {
 
 ### 제네릭
 > 단일 타입이 아닌 다양한 타입을 처리할 수 있는 컴포넌트를 만드는 것
+> 선언 시점이 아니라 생성 시점에 타입을 명시하여 하나의 타입만이 아닌 다양한 타입을 사용할 수 있도록 한다.
 
 ```typescript
 // 타입 변수 사용. 값이 아닌 타입에서 작동하는 특별한 종류의 변수
@@ -813,7 +815,35 @@ x = y // 좋아요
 y = x // x에 location 프로퍼티가 없기 때문에 오류
 ```
 
+## Type과 Interface의 차이점
+> Interface는 여러곳에서 사용되는 새로운 이름을 만든다.
+> Type aliases는 새로운 이름을 만들지 않는다.
+```typescript
+type Alias = { num: number }
+interface Interface {
+  num: number
+}
+
+declare function aliased(arg: Alias): Alias
+declare function interfaced(arg: Interface): Interface
+```
+> Type aliases 는 extends / implements 될 수 없다.
+> 가능하다면 Type aliases 보다 Interface 를 이용 해야한다.
+> 한편 Interface로 표현할 수 없는 형태이고 union, tuple을 이용해야 한다면 Type aliases 를 이용한다.
+
+## tsconfig
+
+`import React, { Component, FC } from 'react'`
+> 이런 형태로 가기 위해선
+
+```json
+{
+  "allowSyntheticDefaultImports": true,
+  "esModuleInterop": true
+}
+```
+
 **참고 사이트**
 1. [TypeScript-kr](https://typescript-kr.github.io)
 2. [https://infoscis.github.io](https://infoscis.github.io)
-
+3. [typescript-type과-interface-차이](https://medium.com/@alexsung/typescript-type과-interface-차이-86666e3e90c)

@@ -1,14 +1,14 @@
-import * as React from 'react'
+import React, { FC, ReactElement } from 'react'
 
 import { InjectedTodoListProps } from 'pages/TodoList'
 
 import TodoItemComponent from './TodoItem'
 
-const TodoListComponent: React.FC<InjectedTodoListProps> = ({
+const TodoListComponent: FC<InjectedTodoListProps> = ({
   todoItems, input,
   onCreate, onChange, onToggle, onRemove
 }) => {
-  const todoItemList: React.ReactElement[] = todoItems.map(todo => (
+  const todoItemList: ReactElement[] = todoItems.map(todo => (
     <TodoItemComponent
       key={todo.id}
       text={todo.text}

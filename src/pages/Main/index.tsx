@@ -1,10 +1,8 @@
-import * as React from 'react'
+import React, { FC } from 'react'
 
-interface Props {
+interface Props {}
 
-}
-
-const MainComponent: React.FC<Props> = () => {
+const MainComponent: FC<Props> = () => {
   return (
     <div>
       Hello World!

@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { Component, ComponentType } from 'react'
 import { Subtract } from 'utility-types'
 
 export interface InjectedCounterProps {
@@ -16,8 +16,8 @@ interface CounterState {
   value: number
 }
 
-export default <P extends InjectedCounterProps>(CounterComponent: React.ComponentType<P>) => (
-  class Counter extends React.Component<Subtract<P, InjectedCounterProps> & CounterProps, CounterState> {
+export default <P extends InjectedCounterProps>(CounterComponent: ComponentType<P>) => (
+  class Counter extends Component<Subtract<P, InjectedCounterProps> & CounterProps, CounterState> {
     constructor(props: Subtract<P, InjectedCounterProps> & CounterProps) {
       super(props)
       this.state = {

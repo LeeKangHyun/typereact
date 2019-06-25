@@ -1,8 +1,8 @@
-import * as React from 'react'
+import React, { FC } from 'react'
 
 import withController, { InjectedCounterProps } from './Controller'
 
-const CounterComponent: React.FC<InjectedCounterProps> = ({
+const CounterComponent: FC<InjectedCounterProps> = ({
   value,
   onIncrement,
   onDecrement

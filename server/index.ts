@@ -18,7 +18,7 @@ app.use('/api', API)
 
 app.all('/*', (req, res) => {
   console.log('Reading the main route through http request, sending index.html')
-  res.sendFile(path.join(__dirname, '..', 'build', 'index.html'))
+  res.sendFile(path.join(__dirname, '..', 'build', 'index.tsx.html'))
 })
 
 const server = http.createServer(app)

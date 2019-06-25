@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { FC } from 'react'
 
 interface Props {
   text: string
@@ -7,7 +7,7 @@ interface Props {
   onRemove(): void
 }
 
-const TodoItemComponent: React.FC<Props> = ({
+const TodoItemComponent: FC<Props> = ({
   text, done,
   onToggle, onRemove
 }) => {

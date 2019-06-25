@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { Component, FormEvent } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
@@ -22,14 +22,14 @@ interface Props {
   TodosActions: typeof todosActions
 }
 
-class TodoList extends React.Component<Props> {
-  onCreate = (event: React.FormEvent<HTMLFormElement>): void => {
+class TodoList extends Component<Props> {
+  onCreate = (event: FormEvent<HTMLFormElement>): void => {
     event.preventDefault()
     const { TodosActions, input } = this.props
     TodosActions.create(input)
   }
   
-  onChange = (event: React.FormEvent<HTMLInputElement>): void => {
+  onChange = (event: FormEvent<HTMLInputElement>): void => {
     const { value } = event.currentTarget
     const { TodosActions } = this.props
     if (value === '') return
