@@ -7,6 +7,7 @@ const Main = React.lazy(() => import(/* webpackChunkName: 'Main' */ 'pages/Main'
 const Product = React.lazy(() => import(/* webpackChunkName: 'Product' */ 'pages/Products'))
 const Counter = React.lazy(() => import(/* webpackChunkName: 'Counter' */ 'pages/Counter'))
 const TodoList = React.lazy(() => import(/* webpackChunkName: 'TodoList' */ 'pages/TodoList'))
+const Chat = React.lazy(() => import(/* webpackChunkName: 'Chat' */ 'pages/Chat'))
 
 export default function AppRouter(): JSX.Element {
   return (
@@ -19,6 +20,7 @@ export default function AppRouter(): JSX.Element {
             <Route path="/products/:id" component={Product} />
             <Route path="/counter" component={Counter} />
             <Route path="/todo" component={TodoList} />
+            <Route path="/chat" component={Chat} />
           </Switch>
         </div>
       </Suspense>

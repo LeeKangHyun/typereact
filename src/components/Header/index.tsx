@@ -25,6 +25,9 @@ const HeaderComponent: React.FC<Props> = () => {
         <li>
           <Link to="/todo">TodoList</Link>
         </li>
+        <li>
+          <Link to="/chat">Chat</Link>
+        </li>
       </ul>
     </nav>
   )
