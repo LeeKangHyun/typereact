@@ -2,17 +2,23 @@ import React, { FC } from 'react'
 
 import withController, { InjectedCounterProps } from './Controller'
 
+import { Wrap, Btn } from './styled'
+
 const CounterComponent: FC<InjectedCounterProps> = ({
   value,
   onIncrement,
-  onDecrement
+  onDecrement,
+  onMultiple,
+  onDivision,
 }) => {
   return (
-    <div>
-      <button onClick={onDecrement}>-</button>
+    <Wrap>
+      <Btn onClick={onDecrement}>-</Btn>
+      <Btn onClick={onIncrement}>+</Btn>
+      <Btn onClick={onMultiple}>x</Btn>
+      <Btn onClick={onDivision}>/</Btn>
       {value}
-      <button onClick={onIncrement}>+</button>
-    </div>
+    </Wrap>
   )
 }
 

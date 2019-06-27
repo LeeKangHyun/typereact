@@ -5,11 +5,8 @@ export interface InjectedCounterProps {
   value: number
   onIncrement(): void
   onDecrement(): void
-}
-
-interface CounterProps {
-  minValue?: number
-  maxValue?: number
+  onMultiple(): void
+  onDivision(): void
 }
 
 interface CounterState {
@@ -17,8 +14,8 @@ interface CounterState {
 }
 
 export default <P extends InjectedCounterProps>(CounterComponent: ComponentType<P>) => (
-  class Counter extends Component<Subtract<P, InjectedCounterProps> & CounterProps, CounterState> {
-    constructor(props: Subtract<P, InjectedCounterProps> & CounterProps) {
+  class Counter extends Component<Subtract<P, InjectedCounterProps>, CounterState> {
+    constructor(props: Subtract<P, InjectedCounterProps>) {
       super(props)
       this.state = {
         value: 0,
@@ -27,15 +24,25 @@ export default <P extends InjectedCounterProps>(CounterComponent: ComponentType<
     
     increment = () => {
       this.setState((prevState) => ({
-        value: prevState.value === this.props.maxValue ?
-          prevState.value : prevState.value + 1
+        value: prevState.value + 1
       }))
     }
     
     decrement = () => {
       this.setState(prevState => ({
-        value: prevState.value === this.props.minValue ?
-          prevState.value : prevState.value - 1
+        value: prevState.value - 1
+      }))
+    }
+    
+    multiple = () => {
+      this.setState(prevState => ({
+        value: prevState.value << 1
+      }))
+    }
+    
+    division = () => {
+      this.setState(prevState => ({
+        value: prevState.value >> 1
       }))
     }
     
@@ -47,6 +54,8 @@ export default <P extends InjectedCounterProps>(CounterComponent: ComponentType<
           {...this.state as CounterState}
           onIncrement={this.increment}
           onDecrement={this.decrement}
+          onMultiple={this.multiple}
+          onDivision={this.division}
         />
       )
     }

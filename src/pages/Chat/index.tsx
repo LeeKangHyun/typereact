@@ -1,33 +1,34 @@
-import React, { FunctionComponent, useState, useEffect, useCallback } from 'react'
-import axios, { AxiosInstance } from 'axios'
+import React, { FunctionComponent, useRef, useEffect } from 'react'
+import io from 'socket.io-client'
 
 const ChatComponent:FunctionComponent = () => {
-  interface State {
+  interface socket {
     [propName: string]: any
   }
   
-  const [data, setData] = useState<State>({})
+  const _socket: socket = useRef(null)
   
-  const apiCall = useCallback(async (): Promise<AxiosInstance> => {
-    const response = await axios.get('/Hello')
-    try {
-      return response.data
-    } catch(err) {
-      throw new Error(err)
+  useEffect(() => {
+    // const socket = io.connect('/socket.io')
+    const socket = io.connect('http://localhost:4001')
+    _socket.current = socket
+    socket.on('news', (data: any) => {
+      console.log(data)
+      socket.emit('my other event', { my: 'data' })
+    })
+    
+    return () => {
+      socket.on('disconnect', (a: any) => {
+        console.log(a)
+      })
     }
   }, [])
   
-  useEffect(() => {
-    apiCall().then((data) => {
-      setData(data)
-    })
-  },[ apiCall ])
-  
   return (
     <>
-      <pre>
-        {JSON.stringify(data, null, 2)}
-      </pre>
+      <h1>Welcome Chat Room</h1>
+      <button>나가기</button>
+      <button>다시?</button>
     </>
   )
 }
