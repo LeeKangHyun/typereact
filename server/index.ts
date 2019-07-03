@@ -3,7 +3,6 @@ import path from 'path'
 import morgan from 'morgan'
 import http from 'http'
 import socket from 'socket.io'
-import cors from 'cors'
 
 import API from './routes/api'
 
@@ -39,19 +38,6 @@ server.listen(app.get('port'), () => {
 
 const chatApp = express()
 
-const whitelist = ['http://localhost:3001']
-
-chatApp.use('*', cors({
-  origin: function (origin: any, callback) {
-    console.log(origin)
-    if (whitelist.indexOf(origin) !== -1) {
-      callback(null, true)
-    } else {
-      callback(new Error('Not Allowed'))
-    }
-  }
-}))
-
 chatApp.set('port', 4001)
 
 const chatServer = http.createServer(chatApp)
@@ -59,15 +45,20 @@ const chatServer = http.createServer(chatApp)
 const io = socket(chatServer)
 
 io.on('connection', (socket: socket.Socket): void => {
-  console.log('User connected')
+  const handshake: socket.Handshake = socket.handshake
+  console.log('Device connected')
+  console.log(handshake, handshake.headers['user-agent'], handshake.address)
   
-  socket.emit('news', { hello: 'world' })
-  socket.on('my other event', (data) => {
+  socket.on('getUserAgent', (data) => {
     console.log(data)
   })
   
+  socket.on('', () => {
+  
+  })
+  
   socket.on('disconnect', () => {
-    console.log('user disconnected')
+    console.log('Device disconnected')
   })
 })
 

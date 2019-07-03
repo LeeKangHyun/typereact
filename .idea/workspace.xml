@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cad15403-4d26-4073-9dcf-70b97c8c32bf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/server/chat/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Counter/styled.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/setupProxy.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/styled.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/styled.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Chat/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Chat/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Counter/Controller.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Counter/Controller.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Counter/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Counter/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/setupProxy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/setupProxy.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,14 +22,14 @@
     <favorites_list name="typereact" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="vertical" split-proportion="0.5">
       <split-first>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/server/index.ts">
+            <entry file="file://$PROJECT_DIR$/src/pages/Chat/index.tsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="370">
-                  <caret line="46" column="42" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="42" />
+                <state relative-caret-position="525">
+                  <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
                 </state>
               </provider>
             </entry>
@@ -44,28 +39,10 @@
       <split-second>
         <leaf>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/pages/Chat/index.tsx">
+            <entry file="file://$PROJECT_DIR$/server/index.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="25">
-                  <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/node_modules/@types/socket.io-client/index.d.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="525">
-                  <caret line="593" column="6" selection-start-line="593" selection-start-column="6" selection-end-line="593" selection-end-column="6" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/setupProxy.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="275">
-                  <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+                <state relative-caret-position="75">
+                  <caret line="44" column="28" selection-start-line="44" selection-start-column="28" selection-end-line="44" selection-end-column="28" />
                 </state>
               </provider>
             </entry>
@@ -129,7 +106,6 @@
         <option value="$PROJECT_DIR$/server/routes/api.ts" />
         <option value="$PROJECT_DIR$/@types/index.d.ts" />
         <option value="$PROJECT_DIR$/src/routes/index.tsx" />
-        <option value="$PROJECT_DIR$/src/components/Header/styled.tsx" />
         <option value="$PROJECT_DIR$/src/components/Header/index.tsx" />
         <option value="$PROJECT_DIR$/src/serviceWorker.js" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/util.js" />
@@ -139,11 +115,12 @@
         <option value="$PROJECT_DIR$/src/index.tsx" />
         <option value="$PROJECT_DIR$/server/routes/chat/index.js" />
         <option value="$PROJECT_DIR$/server/chat/index.ts" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/setupProxy.ts" />
         <option value="$PROJECT_DIR$/config/webpackDevServer.config.js" />
         <option value="$PROJECT_DIR$/tsconfig.json" />
         <option value="$PROJECT_DIR$/src/setupProxy.js" />
+        <option value="$PROJECT_DIR$/src/components/Header/styled.tsx" />
+        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/pages/Chat/index.tsx" />
         <option value="$PROJECT_DIR$/server/index.ts" />
       </list>
@@ -160,7 +137,7 @@
       <scroll-view-position x="0" y="0" />
     </layout>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="y" value="23" />
     <option name="width" value="2560" />
     <option name="height" value="1417" />
@@ -170,56 +147,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="typereact" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/Documents/github/typereact" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-            <path>
-              <item name="typereact" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/Documents/github/typereact" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="server" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="typereact" type="b2602c69:ProjectViewProjectNode" />
               <item name="typereact" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="typereact" type="b2602c69:ProjectViewProjectNode" />
-              <item name="typereact" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="typereact" type="b2602c69:ProjectViewProjectNode" />
-              <item name="typereact" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="typereact" type="b2602c69:ProjectViewProjectNode" />
-              <item name="typereact" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="typereact" type="b2602c69:ProjectViewProjectNode" />
-              <item name="typereact" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="@types" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="typereact" type="b2602c69:ProjectViewProjectNode" />
-              <item name="typereact" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="@types" type="462c0819:PsiDirectoryNode" />
-              <item name="socket.io-client" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="typereact" type="b2602c69:ProjectViewProjectNode" />
@@ -240,13 +173,20 @@
             <path>
               <item name="typereact" type="b2602c69:ProjectViewProjectNode" />
               <item name="typereact" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="typereact" type="b2602c69:ProjectViewProjectNode" />
               <item name="typereact" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="typereact" type="b2602c69:ProjectViewProjectNode" />
+              <item name="typereact" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Header" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="typereact" type="b2602c69:ProjectViewProjectNode" />
@@ -260,6 +200,22 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="Chat" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="typereact" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/Documents/github/typereact" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="typereact" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/Documents/github/typereact" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="server" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -304,11 +260,24 @@
     </option>
   </component>
   <component name="RunManager" selected="npm.dev">
+    <configuration default="true" type="JavascriptDebugType" engineId="07f8375a-e881-41fd-9007-263cac7144e2">
+      <method v="2" />
+    </configuration>
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
         <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="server" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="server" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -324,9 +293,15 @@
       <envs />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="npm.dev" />
+      <item itemvalue="npm.start" />
+      <item itemvalue="npm.server" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.server" />
         <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
@@ -356,6 +331,7 @@
       <workItem from="1561365275921" duration="229000" />
       <workItem from="1561539723885" duration="280000" />
       <workItem from="1561603899592" duration="16316000" />
+      <workItem from="1562130630280" duration="10758000" />
     </task>
     <task id="LOCAL-00001" summary="readme 수정">
       <created>1560158439130</created>
@@ -487,35 +463,35 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90623000" />
+    <option name="totallyTimeSpent" value="101381000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="2560" height="1417" extended-state="0" />
+    <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49163637" weight="0.14375" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49163637" weight="0.20390625" />
       <window_info id="Structure" order="1" sideWeight="0.50836366" side_tool="true" weight="0.14375" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" weight="0.3296875" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32581818" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32932332" />
-      <window_info anchor="bottom" id="GraphQL" order="9" />
-      <window_info anchor="bottom" id="TypeScript" order="10" weight="0.32932332" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32581818" />
-      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" weight="0.32932332" />
-      <window_info anchor="bottom" id="Quokka" order="13" weight="0.32857144" />
+      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="5" />
+      <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32932332" />
+      <window_info anchor="bottom" id="GraphQL" order="8" />
+      <window_info anchor="bottom" id="TypeScript" order="9" weight="0.32932332" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32581818" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32932332" />
+      <window_info anchor="bottom" id="Quokka" order="12" weight="0.32857144" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="JSON Viewer" order="3" />
       <window_info anchor="right" id="Key Promoter X" order="4" />
+      <window_info active="true" anchor="right" id="Debug" order="5" visible="true" weight="0.496875" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49774435" visible="true" weight="0.14375" />
@@ -593,27 +569,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="typescript and cra, express" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/scripts/build.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="18" column="46" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/routes/index.ts" />
     <entry file="file://$PROJECT_DIR$/node_modules/@types/express/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
@@ -1067,13 +1022,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Header/styled.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/serviceWorker.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
@@ -1085,13 +1033,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/start.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="76" selection-start-line="7" selection-start-column="76" selection-end-line="7" selection-end-column="76" />
         </state>
       </provider>
     </entry>
@@ -1170,13 +1111,6 @@
     <entry file="file://$PROJECT_DIR$/node_modules/socket.io-client/package.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="158" column="5" selection-start-line="158" selection-start-column="5" selection-end-line="158" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/env.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1201,156 +1135,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@types/socket.io/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="775">
-          <caret line="287" column="2" selection-start-line="287" selection-start-column="2" selection-end-line="287" selection-end-column="2" />
-          <folding>
-            <element signature="e#750#789#0" />
-            <element signature="e#814#952#0" />
-            <element signature="e#1225#1289#0" />
-            <element signature="n#!!doc;n#listen#0;n#!!block;n#SocketIOStatic#0" />
-            <element signature="n#!!doc;n#nsps#0;n#!!block;n#Server#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#sockets#0;n#!!block;n#Server#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#json#0;n#!!block;n#Server#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#volatile#0;n#!!block;n#Server#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#local#0;n#!!block;n#Server#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#checkRequest#0;n#!!block;n#Server#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#serveClient#0;n#!!block;n#Server#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#serveClient#1;n#!!block;n#Server#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#path#0;n#!!block;n#Server#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#path#1;n#!!block;n#Server#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#adapter#0;n#!!block;n#Server#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#adapter#1;n#!!block;n#Server#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#origins#0;n#!!block;n#Server#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#origins#1;n#!!block;n#Server#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#origins#2;n#!!block;n#Server#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#attach#0;n#!!block;n#Server#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#attach#1;n#!!block;n#Server#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#listen#0;n#!!block;n#Server#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#listen#1;n#!!block;n#Server#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#bind#0;n#!!block;n#Server#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#onconnection#0;n#!!block;n#Server#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#of#0;n#!!block;n#Server#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#close#0;n#!!block;n#Server#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#on#0;n#!!block;n#Server#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#on#1;n#!!block;n#Server#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#on#2;n#!!block;n#Server#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#to#0;n#!!block;n#Server#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#in#0;n#!!block;n#Server#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#use#0;n#!!block;n#Server#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#emit#0;n#!!block;n#Server#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#send#0;n#!!block;n#Server#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#write#0;n#!!block;n#Server#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#clients#0;n#!!block;n#Server#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#compress#0;n#!!block;n#Server#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#ServerOptions#0;n#SocketIO#1" />
-            <element signature="n#!!block;n#ServerOptions#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#path#0;n#!!block;n#ServerOptions#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#serveClient#0;n#!!block;n#ServerOptions#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#adapter#0;n#!!block;n#ServerOptions#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#origins#0;n#!!block;n#ServerOptions#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#pingTimeout#0;n#!!block;n#ServerOptions#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#pingInterval#0;n#!!block;n#ServerOptions#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#maxHttpBufferSize#0;n#!!block;n#ServerOptions#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#allowRequest#0;n#!!block;n#ServerOptions#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#transports#0;n#!!block;n#ServerOptions#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#allowUpgrades#0;n#!!block;n#ServerOptions#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#perMessageDeflate#0;n#!!block;n#ServerOptions#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#httpCompression#0;n#!!block;n#ServerOptions#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#cookie#0;n#!!block;n#ServerOptions#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#Namespace#0;n#SocketIO#1" />
-            <element signature="n#!!block;n#Namespace#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#name#0;n#!!block;n#Namespace#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#server#0;n#!!block;n#Namespace#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#sockets#0;n#!!block;n#Namespace#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#connected#0;n#!!block;n#Namespace#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#adapter#0;n#!!block;n#Namespace#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#json#0;n#!!block;n#Namespace#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#use#0;n#!!block;n#Namespace#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#to#0;n#!!block;n#Namespace#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#in#0;n#!!block;n#Namespace#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#send#0;n#!!block;n#Namespace#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#write#0;n#!!block;n#Namespace#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#on#0;n#!!block;n#Namespace#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#on#1;n#!!block;n#Namespace#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#on#2;n#!!block;n#Namespace#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#clients#0;n#!!block;n#Namespace#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#compress#0;n#!!block;n#Namespace#0;n#SocketIO#1" />
-            <element signature="n#!!block;n#Packet#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#0#0;n#!!block;n#Packet#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#1#0;n#!!block;n#Packet#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#2#0;n#!!block;n#Packet#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#Socket#0;n#SocketIO#1" />
-            <element signature="n#!!block;n#Socket#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#nsp#0;n#!!block;n#Socket#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#server#0;n#!!block;n#Socket#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#adapter#0;n#!!block;n#Socket#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#id#0;n#!!block;n#Socket#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#request#0;n#!!block;n#Socket#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#client#0;n#!!block;n#Socket#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#conn#0;n#!!block;n#Socket#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#rooms#0;n#!!block;n#Socket#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#connected#0;n#!!block;n#Socket#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#disconnected#0;n#!!block;n#Socket#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#handshake#0;n#!!block;n#Socket#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#json#0;n#!!block;n#Socket#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#volatile#0;n#!!block;n#Socket#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#broadcast#0;n#!!block;n#Socket#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#to#0;n#!!block;n#Socket#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#in#0;n#!!block;n#Socket#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#use#0;n#!!block;n#Socket#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#send#0;n#!!block;n#Socket#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#write#0;n#!!block;n#Socket#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#join#0;n#!!block;n#Socket#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#leave#0;n#!!block;n#Socket#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#leaveAll#0;n#!!block;n#Socket#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#disconnect#0;n#!!block;n#Socket#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#listeners#0;n#!!block;n#Socket#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#compress#0;n#!!block;n#Socket#0;n#SocketIO#1" />
-            <element signature="n#!!block;n#Handshake#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#headers#0;n#!!block;n#Handshake#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#time#0;n#!!block;n#Handshake#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#address#0;n#!!block;n#Handshake#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#xdomain#0;n#!!block;n#Handshake#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#secure#0;n#!!block;n#Handshake#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#issued#0;n#!!block;n#Handshake#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#url#0;n#!!block;n#Handshake#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#query#0;n#!!block;n#Handshake#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#Room#0;n#SocketIO#1" />
-            <element signature="n#!!block;n#Room#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#Rooms#0;n#SocketIO#1" />
-            <element signature="n#!!block;n#Rooms#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#Adapter#0;n#SocketIO#1" />
-            <element signature="n#!!block;n#Adapter#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#nsp#0;n#!!block;n#Adapter#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#rooms#0;n#!!block;n#Adapter#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#sids#0;n#!!block;n#Adapter#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#add#0;n#!!block;n#Adapter#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#del#0;n#!!block;n#Adapter#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#delAll#0;n#!!block;n#Adapter#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#broadcast#0;n#!!block;n#Adapter#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#Client#0;n#SocketIO#1" />
-            <element signature="n#!!block;n#Client#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#server#0;n#!!block;n#Client#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#conn#0;n#!!block;n#Client#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#id#0;n#!!block;n#Client#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#request#0;n#!!block;n#Client#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#sockets#0;n#!!block;n#Client#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#nsps#0;n#!!block;n#Client#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#EngineSocket#0;n#SocketIO#1" />
-            <element signature="n#!!block;n#EngineSocket#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#id#0;n#!!block;n#EngineSocket#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#server#0;n#!!block;n#EngineSocket#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#readyState#0;n#!!block;n#EngineSocket#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#remoteAddress#0;n#!!block;n#EngineSocket#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#upgraded#0;n#!!block;n#EngineSocket#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#request#0;n#!!block;n#EngineSocket#0;n#SocketIO#1" />
-            <element signature="n#!!doc;n#transport#0;n#!!block;n#EngineSocket#0;n#SocketIO#1" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SECOND">
@@ -1368,9 +1152,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/chat/index.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/webpackDevServer.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="117">
@@ -1385,31 +1166,86 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/socket.io-client/lib/socket.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-798">
+          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/socket.io-client/lib/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="33" column="2" selection-start-line="33" selection-start-column="2" selection-end-line="33" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/setupProxy.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+        <state relative-caret-position="250">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/socket.io-client/lib/url.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-210">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/chat/index.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/start.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1758">
+          <caret line="48" column="14" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="91" column="40" selection-start-line="91" selection-start-column="40" selection-end-line="91" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Header/styled.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/@types/socket.io-client/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="593" column="6" selection-start-line="593" selection-start-column="6" selection-end-line="593" selection-end-column="6" />
+        <state relative-caret-position="1975">
+          <caret line="81" column="45" selection-start-line="81" selection-start-column="45" selection-end-line="81" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@types/socket.io/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="821" column="4" selection-start-line="821" selection-start-column="4" selection-end-line="821" selection-end-column="4" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/Chat/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
+        <state relative-caret-position="525">
+          <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/index.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="46" column="42" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="42" />
+        <state relative-caret-position="75">
+          <caret line="44" column="28" selection-start-line="44" selection-start-column="28" selection-end-line="44" selection-end-column="28" />
         </state>
       </provider>
     </entry>

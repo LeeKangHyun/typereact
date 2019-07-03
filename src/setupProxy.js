@@ -8,12 +8,4 @@ module.exports = function(app) {
       changeOrigin: true,
     }
   ))
-  app.use(proxy(
-    '/socket.io',
-    {
-      target: "http://localhost:4001/",
-      changeOrigin: true,
-      ws: true,
-    }
-  ))
 }

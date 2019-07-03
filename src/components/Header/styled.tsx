@@ -1,8 +1,8 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { Link as BaseLink } from 'react-router-dom'
 
 export const Header = styled.nav`
-  background-color: darkgoldenrod;
+  background-color: indianred;
 `
 
 export const Ul = styled.ul`
@@ -16,10 +16,10 @@ interface LiProps {
 
 export const Li = styled.li<LiProps>`
   display: inline-block;
-  ${props => props.isLeft ? `
+  ${props => props.isLeft ? css`
     flex: auto;
     margin-right: auto;
-  `:`
+  ` : css`
     margin-left: 2rem;
   `};
   a {
