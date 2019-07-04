@@ -49,14 +49,6 @@ io.on('connection', (socket: socket.Socket): void => {
   console.log('Device connected')
   console.log(handshake, handshake.headers['user-agent'], handshake.address)
   
-  socket.on('getUserAgent', (data) => {
-    console.log(data)
-  })
-  
-  socket.on('', () => {
-  
-  })
-  
   socket.on('disconnect', () => {
     console.log('Device disconnected')
   })

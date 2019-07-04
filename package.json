@@ -76,6 +76,7 @@
     "workbox-webpack-plugin": "4.2.0"
   },
   "devDependencies": {
+    "@storybook/react": "^5.1.9",
     "@types/axios": "^0.14.0",
     "@types/express": "^4.17.0",
     "@types/http-proxy-middleware": "^0.19.2",
@@ -102,7 +103,8 @@
     "dev": "concurrently --names \"WDS,TSC,EXPRESS\" -c \"bgBlue.bold,bgMagenta.bold,bgWhite.bold\" \"yarn start\" \"tsc -w -p server\" \"yarn server\"",
     "dev:attach": "concurrently --names \"TSC,EXPRESS\" -c \"bgMagenta.bold,bgWhite.bold\" \"tsc -w -p server\" \"yarn server\"",
     "dev:debug": "concurrently --names \"WDS,TSC\" -c \"bgBlue.bold,bgMagenta.bold\" \"yarn start\" \"tsc -w -p server\"",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "storybook": "start-storybook"
   },
   "eslintConfig": {
     "extends": "react-app"

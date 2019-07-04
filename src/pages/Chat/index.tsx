@@ -1,5 +1,6 @@
 import React, { FunctionComponent, useRef, useEffect } from 'react'
-import io from 'socket.io-client'
+
+import Socket from 'Utils/Socket'
 
 const ChatComponent: FunctionComponent = () => {
   interface socket {
@@ -9,20 +10,12 @@ const ChatComponent: FunctionComponent = () => {
   const _socket: socket = useRef(null)
   
   useEffect(() => {
-    _socket.current = io.connect('http://localhost:4001')
+    _socket.current = new Socket('http://localhost:4001')
     return () => {
+      debugger
       _socket.current.close()
     }
   }, [])
-  
-  useEffect(() => {
-    if (_socket.current) {
-      _socket.current.emit(
-        'getUserAgent',
-        { userAgent: 'user agent' }
-      )
-    }
-  }, [_socket])
   
   return (
     <>
