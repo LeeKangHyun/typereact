@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cad15403-4d26-4073-9dcf-70b97c8c32bf" name="Default Changelist" comment="hhhkh">
-      <change afterPath="$PROJECT_DIR$/MD/Merging.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MD/Mixin.md" afterDir="false" />
+    <list default="true" id="cad15403-4d26-4073-9dcf-70b97c8c32bf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils/Socket/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/Socket/index.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,20 +17,7 @@
     <favorites_list name="typereact" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/MD/Mixin.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="1050">
-                <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -124,7 +108,7 @@
       <scroll-view-position x="0" y="0" />
     </layout>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="2560" />
     <option name="height" value="1417" />
@@ -134,6 +118,22 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="typereact" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/Documents/github/typereact" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="typereact" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/Documents/github/typereact" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="server" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -163,22 +163,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Utils" type="462c0819:PsiDirectoryNode" />
               <item name="Socket" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="typereact" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/Documents/github/typereact" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-            <path>
-              <item name="typereact" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/Documents/github/typereact" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="server" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -308,7 +292,8 @@
       <workItem from="1561603899592" duration="16316000" />
       <workItem from="1562130630280" duration="10859000" />
       <workItem from="1562203818430" duration="14778000" />
-      <workItem from="1562294545948" duration="5379000" />
+      <workItem from="1562294545948" duration="6584000" />
+      <workItem from="1562550630280" duration="768000" />
     </task>
     <task id="LOCAL-00001" summary="readme 수정">
       <created>1560158439130</created>
@@ -457,40 +442,46 @@
       <option name="project" value="LOCAL" />
       <updated>1562231975488</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="어렵다">
+      <created>1562319512361</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1562319512361</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121639000" />
+    <option name="totallyTimeSpent" value="123612000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="23" width="2560" height="1417" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49163637" weight="0.20390625" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49163637" visible="true" weight="0.20390625" />
       <window_info id="Structure" order="1" sideWeight="0.50836366" side_tool="true" weight="0.14375" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" weight="0.3296875" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32945454" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32581818" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3255639" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="5" />
       <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32932332" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.32932332" />
       <window_info anchor="bottom" id="GraphQL" order="8" />
       <window_info anchor="bottom" id="TypeScript" order="9" weight="0.32932332" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32581818" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32932332" />
       <window_info anchor="bottom" id="Quokka" order="12" weight="0.32857144" />
-      <window_info anchor="right" x="0" y="0" width="590" height="1240" id="Documentation" side_tool="true" weight="0.3296875" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="JSON Viewer" order="3" />
       <window_info anchor="right" id="Key Promoter X" order="4" />
       <window_info anchor="right" id="Debug" order="5" weight="0.496875" />
+      <window_info anchor="right" x="0" y="0" width="590" height="1240" id="Documentation" order="6" side_tool="true" weight="0.3296875" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49774435" visible="true" weight="0.14375" />
@@ -565,7 +556,8 @@
     <MESSAGE value="readme 수정" />
     <MESSAGE value="readme 수정 및 파일 작성해 보기" />
     <MESSAGE value="typescript and cra, express" />
-    <option name="LAST_COMMIT_MESSAGE" value="typescript and cra, express" />
+    <MESSAGE value="어렵다" />
+    <option name="LAST_COMMIT_MESSAGE" value="어렵다" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -955,8 +947,8 @@
     <entry file="file://$PROJECT_DIR$/MD/Mixin.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1050">
-            <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
+          <first_editor relative-caret-position="575">
+            <caret line="23" column="2" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
           </first_editor>
           <second_editor />
         </state>
