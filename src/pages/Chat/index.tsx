@@ -4,18 +4,18 @@ import Socket, { SocketInterface } from 'Utils/Socket'
 
 const ChatComponent: FunctionComponent = () => {
   interface socket {
-    current: SocketInterface & any
+    current: SocketInterface | any
   }
   
   const _socket: socket = useRef(null)
 
   const onClickReConnect = useCallback(() => {
     _socket.current.reconnect()
-  }, [])
+  }, [_socket.current])
 
   const onClickOut = useCallback(() => {
     _socket.current.disconnect()
-  }, [])
+  }, [_socket.current])
   
   useEffect(() => {
     const { protocol, hostname } = window.location
