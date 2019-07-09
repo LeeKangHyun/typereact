@@ -1,27 +1,35 @@
-import React, { FunctionComponent, useRef, useEffect } from 'react'
+import React, { FunctionComponent, useRef, useEffect, useCallback } from 'react'
 
-import Socket from 'Utils/Socket'
+import Socket, { SocketInterface } from 'Utils/Socket'
 
 const ChatComponent: FunctionComponent = () => {
   interface socket {
-    [propName: string]: any
+    current: SocketInterface & any
   }
   
   const _socket: socket = useRef(null)
+
+  const onClickReConnect = useCallback(() => {
+    _socket.current.reconnect()
+  }, [])
+
+  const onClickOut = useCallback(() => {
+    _socket.current.disconnect()
+  }, [])
   
   useEffect(() => {
-    _socket.current = new Socket('http://localhost:4001')
+    const { protocol, hostname } = window.location
+    _socket.current = new Socket(`${protocol}//${hostname}:4001`)
     return () => {
-      debugger
-      _socket.current.close()
+      _socket.current.disconnect()
     }
   }, [])
   
   return (
     <>
       <h1>Welcome Chat Room</h1>
-      <button>나가기</button>
-      <button>다시?</button>
+      <button onClick={onClickOut}>나가기</button>
+      <button onClick={onClickReConnect}>다시</button>
     </>
   )
 }

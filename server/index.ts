@@ -12,7 +12,7 @@ import API from './routes/api'
 
 const app = express()
 
-app.set('port', 3001)
+app.set('port', process.env.api_port)
 
 app.use(express.static(path.join(__dirname, '..', 'build', 'static')))
 app.use(express.json())
@@ -38,7 +38,7 @@ server.listen(app.get('port'), () => {
 
 const chatApp = express()
 
-chatApp.set('port', 4001)
+chatApp.set('port', process.env.chat_port)
 
 const chatServer = http.createServer(chatApp)
 
@@ -46,11 +46,16 @@ const io = socket(chatServer)
 
 io.on('connection', (socket: socket.Socket): void => {
   const handshake: socket.Handshake = socket.handshake
-  console.log('Device connected')
+  console.log('++++ Device connected ++++')
   console.log(handshake, handshake.headers['user-agent'], handshake.address)
   
-  socket.on('disconnect', () => {
-    console.log('Device disconnected')
+  socket.on('error', (error) => {
+    console.error(error)
+  });
+
+  socket.on('disconnect', (reason) => {
+    console.log('---- Device disconnected ----')
+    console.log(reason)
   })
 })
 
