@@ -1,4 +1,4 @@
-export const compose = (...funcs: Function[]) => {
+const Compose = (...funcs: Function[]) => {
   if (funcs.length === 0) {
     return (arg: any[]) => arg
   }
@@ -9,3 +9,4 @@ export const compose = (...funcs: Function[]) => {
   
   return funcs.reduce((a: Function, b: Function) => (...args: Function[]) => a(b(...args)))
 }
+export default Compose

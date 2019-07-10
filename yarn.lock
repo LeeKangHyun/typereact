@@ -7876,11 +7876,6 @@ jest-config@^24.8.0:
     pretty-format "^24.8.0"
     realpath-native "^1.1.0"
 
-jest-core@^0.0.0:
-  version "0.0.0"
-  resolved "https://registry.yarnpkg.com/jest-core/-/jest-core-0.0.0.tgz#804d3adb349dfe0d3c9b778ba828f0417e15d032"
-  integrity sha1-gE062zSd/g08m3eLqCjwQX4V0DI=
-
 jest-diff@^24.8.0:
   version "24.8.0"
   resolved "https://registry.yarnpkg.com/jest-diff/-/jest-diff-24.8.0.tgz#146435e7d1e3ffdf293d53ff97e193f1d1546172"

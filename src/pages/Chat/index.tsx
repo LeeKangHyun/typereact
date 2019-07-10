@@ -36,6 +36,10 @@ const ChatComponent: FC = () => {
   useEffect(() => {
     const { protocol, hostname } = window.location
     _socket.current = new Socket(`${protocol}//${hostname}:4001`)
+    
+    _socket.current.on('Enter', (data: any) => {
+      console.log(data)
+    })
 
     return () => {
       _socket.current.disconnect()

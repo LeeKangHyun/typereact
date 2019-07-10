@@ -44,10 +44,12 @@ const chatServer = http.createServer(chatApp)
 
 const io = socket(chatServer)
 
-io.on('connection', (socket: socket.Socket): void => {
+io.on('connect', (socket: socket.Socket): void => {
   const handshake: socket.Handshake = socket.handshake
   console.log('++++ Device connected ++++')
-  console.log(handshake, handshake.headers['user-agent'], handshake.address)
+  console.log('device >', handshake.headers['user-agent'])
+  console.log('v4 >', handshake.address)
+  socket.broadcast.emit('Enter', { msg: 'Hello, World!' })
   
   socket.on('error', (error) => {
     console.error(error)
