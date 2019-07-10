@@ -1,8 +1,8 @@
 describe('Basic Types', () => {
   test('Enum#number', () => {
-    enum Color {Red, Green, Blue}
+    enum Color { Red = 1, Green = 2, Blue = 4 }
     let c: Color = Color.Green
-    expect(c).toBe(1)
+    expect(c).toBe(2)
   })
 
   test('Enum#name', () => {

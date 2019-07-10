@@ -33,6 +33,7 @@
     "config",
     "jest",
     "src/setupTests.*",
-    "src/setupProxy.*"
+    "src/setupProxy.*",
+    "**/*.test.*"
   ]
 }
