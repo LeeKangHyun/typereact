@@ -1,7 +1,5 @@
 
 module.exports = {
-  "collectCoverage": true,
-  "mapCoverage": true,
   "collectCoverageFrom": [
     "src/**/*.{js,jsx,ts,tsx}",
     "!src/**/*.d.ts"

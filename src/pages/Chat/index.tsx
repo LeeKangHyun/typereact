@@ -18,11 +18,11 @@ const ChatComponent: FC = () => {
 
   const onClickReConnect = useCallback(() => {
     _socket.current.reconnect()
-  }, [_socket.current])
+  }, [])
 
   const onClickOut = useCallback(() => {
     _socket.current.disconnect()
-  }, [_socket.current])
+  }, [])
 
   const onChangeToName = useCallback((event: FormEvent<HTMLInputElement>): void => {
     const { value } = event.currentTarget
