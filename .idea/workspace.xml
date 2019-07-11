@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cad15403-4d26-4073-9dcf-70b97c8c32bf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -27,6 +26,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="100">
               <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Utils/__tests__/Socket.test.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -200,6 +208,13 @@
               <item name="typereact" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Utils" type="462c0819:PsiDirectoryNode" />
+              <item name="__tests__" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="typereact" type="b2602c69:ProjectViewProjectNode" />
+              <item name="typereact" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Utils" type="462c0819:PsiDirectoryNode" />
               <item name="Socket" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -349,7 +364,7 @@
       <workItem from="1562203818430" duration="14778000" />
       <workItem from="1562294545948" duration="6584000" />
       <workItem from="1562550630280" duration="806000" />
-      <workItem from="1562747575960" duration="5613000" />
+      <workItem from="1562747575960" duration="5818000" />
     </task>
     <task id="LOCAL-00001" summary="readme 수정">
       <created>1560158439130</created>
@@ -537,13 +552,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129263000" />
+    <option name="totallyTimeSpent" value="129468000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49163637" visible="true" weight="0.20390625" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49163637" visible="true" weight="0.20390625" />
       <window_info id="Structure" order="1" sideWeight="0.50836366" side_tool="true" weight="0.14375" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" weight="0.3296875" />
@@ -557,7 +572,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32932332" />
       <window_info anchor="bottom" id="GraphQL" order="8" />
       <window_info anchor="bottom" id="TypeScript" order="9" weight="0.32872728" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32509091" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32509091" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32932332" />
       <window_info anchor="bottom" id="Quokka" order="12" weight="0.328" />
       <window_info anchor="right" id="Coverage" side_tool="true" weight="0.3296875" />
@@ -936,13 +951,6 @@
     <entry file="file://$PROJECT_DIR$/src/Utils/Socket/index.test.ts">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils/__tests__/Socket.test.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/react-redux/es/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
@@ -1029,6 +1037,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="790">
           <caret line="51" column="53" selection-start-line="51" selection-start-column="53" selection-end-line="51" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils/__tests__/Socket.test.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
