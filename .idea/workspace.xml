@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cad15403-4d26-4073-9dcf-70b97c8c32bf" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -24,8 +25,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="100">
+              <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -348,7 +349,7 @@
       <workItem from="1562203818430" duration="14778000" />
       <workItem from="1562294545948" duration="6584000" />
       <workItem from="1562550630280" duration="806000" />
-      <workItem from="1562747575960" duration="5314000" />
+      <workItem from="1562747575960" duration="5613000" />
     </task>
     <task id="LOCAL-00001" summary="readme 수정">
       <created>1560158439130</created>
@@ -536,7 +537,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="128964000" />
+    <option name="totallyTimeSpent" value="129263000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
@@ -556,7 +557,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32932332" />
       <window_info anchor="bottom" id="GraphQL" order="8" />
       <window_info anchor="bottom" id="TypeScript" order="9" weight="0.32872728" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32509091" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32509091" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32932332" />
       <window_info anchor="bottom" id="Quokka" order="12" weight="0.328" />
       <window_info anchor="right" id="Coverage" side_tool="true" weight="0.3296875" />
@@ -1033,8 +1034,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="100">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
         </state>
       </provider>
     </entry>
