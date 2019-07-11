@@ -2,6 +2,7 @@ language: node_js
 
 node_js:
   - "8.14.0"
+  - "6"
 
 os:
   - linux
@@ -10,10 +11,6 @@ os:
 branches:
   only:
     - master
-
-cache:
-  npm: false
-  yarn: false
 
 notifications:
   email:
