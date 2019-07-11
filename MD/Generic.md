@@ -1,6 +1,65 @@
 ### 제네릭
-> 단일 타입이 아닌 다양한 타입을 처리할 수 있는 컴포넌트를 만드는 것
-> 선언 시점이 아니라 생성 시점에 타입을 명시하여 하나의 타입만이 아닌 다양한 타입을 사용할 수 있도록 한다.
+> 단일 타입이 아닌 다양한 타입을 처리할 수 있는 컴포넌트를 만드는 것\
+선언 시점이 아니라 생성 시점에 타입을 명시하여 하나의 타입만이 아닌 다양한 타입을 사용할 수 있도록 한다.
+
+```typescript
+interface StackType {
+  push(item: any): void
+  pop(): any
+}
+
+class Stack implements StackType {
+  private data: any[] = []
+  
+  constructor() {}
+  
+  push(item: any):void {
+    this.data.push(item)
+  }
+  
+  pop(): any {
+    return this.data.pop()
+  }
+}
+
+class NumberStack extends Stack {
+  constructor() {
+    super()
+  }
+  
+  push(item: number):void {
+    super.push(item)
+  }
+  
+  pop(): any {
+    return super.pop()
+  }
+}
+
+const stack = new Stack()
+stack.push(1)
+stack.push('a')
+stack.pop().substring(0) // 'a'
+stack.pop().substring(0) // Throw TypeError
+```
+
+```typescript
+class Stack<T> {
+  private data: T[] = []
+  constructor() {}
+  push(item: T): void {
+    this.data.push(item)
+  }
+  pop(): T {
+    return this.data.pop()
+  }
+}
+
+const numberStack = new Stack<number>()
+const stringStack = new Stack<string>()
+numberStack.push(1)
+stringStack.push('1')
+```
 
 ```typescript
 // 타입 변수 사용. 값이 아닌 타입에서 작동하는 특별한 종류의 변수
