@@ -113,6 +113,8 @@ function getSmallPet(): Fish | Bird {
 
 let pet = getSmallPet()
 
+// parameterName is Type 형태를 취해야 한다.
+
 function isFish(pet: Fish | Bird): pet is Fish { // 타입 명제
   return (<Fish>pet).swim !== undefined
 }
@@ -121,6 +123,65 @@ if (isFish(pet)) {
   pet.swim()
 } else {
   pet.fly()
+}
+```
+
+### typeof 타입가드
+
+> typeof v === 'typename', typeof v !== 'typename'
+> 'typename' 은 반드시 number, string, symbol
+
+```typescript
+function padLeft(value: string, padding: string | number) {
+  if (typeof padding === 'number') {
+  
+  }
+  if (typeof padding === 'string') {
+    
+  }
+  throw new Error('')
+}
+```
+
+### instanceof 타입 가드
+
+> 1. 타입이 `any`가 아닌 경우 함수의 `prototype`프로퍼티 타입
+> 2. 해당 타입의 생성자 시그니처에 의해 반환된 타입의 결합
+
+```typescript
+interface Padder {
+    getPaddingString(): string
+}
+
+class SpaceRepeatingPadder implements Padder {
+    constructor(private numSpaces: number) { }
+    getPaddingString() {
+        return Array(this.numSpaces + 1).join(" ");
+    }
+}
+
+class StringPadder implements Padder {
+    constructor(private value: string) { }
+    getPaddingString() {
+        return this.value;
+    }
+}
+
+function getRandomPadder() {
+    return Math.random() < 0.5 ?
+        new SpaceRepeatingPadder(4) :
+        new StringPadder("  ");
+}
+
+// 'SpaceRepeatingPadder | StringPadder' 타입입니다
+let padder: Padder = getRandomPadder();
+
+if (padder instanceof SpaceRepeatingPadder) {
+    padder; // 타입이 'SpaceRepeatingPadder'로 좁혀졌습니다
+}
+
+if (padder instanceof StringPadder) {
+    padder; // 타입이 'StringPadder'로 좁혀졌습니다.
 }
 ```
 
