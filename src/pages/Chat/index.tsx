@@ -1,12 +1,21 @@
 import React, { FC, useRef, useState, useEffect, useCallback, FormEvent } from 'react'
+import { toast } from 'react-toastify'
 
 import Socket, { SocketInterface } from 'Utils/Socket'
+
 import {
   Wrap,
   Title,
   NameForm,
   Button
 } from './styled'
+
+import 'react-toastify/dist/ReactToastify.min.css'
+
+toast.configure({
+  position: 'top-right',
+  autoClose: 1500
+})
 
 const ChatComponent: FC = () => {
   interface socket {
@@ -17,11 +26,15 @@ const ChatComponent: FC = () => {
   const _socket: socket = useRef(null)
 
   const onClickReConnect = useCallback(() => {
-    _socket.current.reconnect()
+    const a = _socket.current.reconnect()
+    console.log(a)
+    debugger
+    toast("채팅 연결")
   }, [])
 
   const onClickOut = useCallback(() => {
     _socket.current.disconnect()
+    toast("채팅 종료")
   }, [])
 
   const onChangeToName = useCallback((event: FormEvent<HTMLInputElement>): void => {
@@ -36,7 +49,6 @@ const ChatComponent: FC = () => {
   useEffect(() => {
     const { protocol, hostname } = window.location
     _socket.current = new Socket(`${protocol}//${hostname}:4001`)
-    
     _socket.current.on('Enter', (data: any) => {
       console.log(data)
     })

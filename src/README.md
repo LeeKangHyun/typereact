@@ -82,7 +82,7 @@ export class Button extends Component {
 ```
 
 ## Restrictive Event Handling
-> tsconfig > library 'dom' 추가 필수
+> tsconfig -> library 'dom' 추가 필수
 
 ```typescript jsx
 import React, { Component, MouseEvent } from 'react'
@@ -204,6 +204,25 @@ function reducer(state: StateType, action: ActionType) {
 
 const Counter: FC<{ initialCount: number }> = ({ initialCount = 0 }) => {
   const [] = useReducer(reducer, { count: initialCount })
+}
+```
+
+# with Redux
+
+> 3.4 버전 이상부터<br>사용가능
+
+```typescript
+function addTodo({}) {}
+function updateTodo({}) {}
+function removeTodo({}) {}
+
+type Action = 
+  | ReturnType<typeof addTodo>
+  | ReturnType<typeof updateTodo>
+  | ReturnType<typeof removeTodo>
+
+function reducer(state: any, action: Action) {
+
 }
 ```
 
