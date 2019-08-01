@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/LeeKangHyun/typereactexam.svg?branch=master)](https://travis-ci.com/LeeKangHyun/typereact)
+[![Build Status](https://travis-ci.com/LeeKangHyun/typereact.svg?branch=master)](https://travis-ci.com/LeeKangHyun/typereact)
 # TypeScript and React Example
 
 ## Init
