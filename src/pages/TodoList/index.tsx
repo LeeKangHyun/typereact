@@ -11,8 +11,8 @@ import TodoListComponent from './Component/TodoList'
 export interface InjectedTodoListProps {
   input: string
   todoItems: TodoItemDataParams[]
-  onCreate(event: any): void
-  onChange(event: any): void
+  onCreate(event: FormEvent<HTMLFormElement>): void
+  onChange(event: FormEvent<HTMLInputElement>): void
   onToggle(id: number): void
   onRemove(id: number): void
 }
@@ -24,27 +24,28 @@ interface Props {
 }
 
 class TodoList extends Component<Props> {
-  onCreate = (event: FormEvent<HTMLFormElement>): void => {
+  onCreate = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     const { TodosActions, input } = this.props
     TodosActions.create(input)
   }
   
-  onChange = (event: FormEvent<HTMLInputElement>): void => {
+  onChange = (event: FormEvent<HTMLInputElement>) => {
     const { value } = event.currentTarget
-    const { TodosActions } = this.props
     if (value === '') return
+    
+    const { TodosActions } = this.props
     TodosActions.changeInput(value)
   }
   
   
-  onToggle = (id: number): void => {
+  onToggle = (id: number) => {
     const { TodosActions } = this.props
     TodosActions.toggle(id)
   }
   
-  onRemove = (id: number): void => {
-    const { TodosActions} = this.props
+  onRemove = (id: number) => {
+    const { TodosActions } = this.props
     TodosActions.remove(id)
   }
   
