@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { FC } from 'react'
 import { compose } from 'redux'
 
 import withController from './Controller'
@@ -9,9 +10,8 @@ import {
   Ul, Li
 } from './styled'
 
-interface Props {}
 
-const HeaderComponent: React.FC<Props> = () => {
+const HeaderComponent: FC = () => {
   return (
     <Header>
       <Ul>
@@ -23,6 +23,9 @@ const HeaderComponent: React.FC<Props> = () => {
         </Li>
         <Li>
           <Link to="/counter">카운터</Link>
+        </Li>
+        <Li>
+          <Link to="/hook_todo">HookTodo</Link>
         </Li>
         <Li>
           <Link to="/todo">TodoList</Link>

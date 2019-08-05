@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Component, FormEvent } from 'react'
-import { bindActionCreators } from 'redux'
+import { compose, bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import { TodoItemDataParams, actionCreators as todosActions } from 'store/modules/Todos'
@@ -52,23 +52,25 @@ class TodoList extends Component<Props> {
     const { todoItems, input } = this.props
     return (
       <TodoListComponent
-        todoItems = { todoItems }
-        input = { input }
-        onCreate = { this.onCreate }
-        onToggle = { this.onToggle }
-        onChange = { this.onChange }
-        onRemove = { this.onRemove }
+        todoItems={ todoItems }
+        input={ input }
+        onCreate={ this.onCreate }
+        onToggle={ this.onToggle }
+        onChange={ this.onChange }
+        onRemove={ this.onRemove }
       />
     )
   }
 }
 
-export default connect(
-  ({ todos }: StoreState ) => ({
-    input: todos.input,
-    todoItems: todos.todoItems
-  }),
-  (dispatch) => ({
-    TodosActions: bindActionCreators(todosActions, dispatch),
-  })
+export default compose(
+  connect(
+    ({ todos }: StoreState ) => ({
+      input: todos.input,
+      todoItems: todos.todoItems
+    }),
+    (dispatch) => ({
+      TodosActions: bindActionCreators(todosActions, dispatch),
+    })
+  )
 )(TodoList);

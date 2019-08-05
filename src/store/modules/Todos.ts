@@ -40,7 +40,11 @@ interface ChangeInputAction {
   }
 }
 
-export type TodoActionTypes = | CreateAction | RemoveAction | ToggleAction | ChangeInputAction
+export type TodoActionTypes =
+  | CreateAction
+  | RemoveAction
+  | ToggleAction
+  | ChangeInputAction
 
 let autoId = 0
 
@@ -131,14 +135,3 @@ export default function todoReducer (
       return state
   }
 }
-
-
-
-
-
-
-
-
-
-
-
