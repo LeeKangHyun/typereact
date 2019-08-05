@@ -1,4 +1,5 @@
-import React, { FC, useRef, useState, useEffect, useCallback, FormEvent } from 'react'
+import * as React from 'react'
+import { FC, useRef, useState, useEffect, useCallback, FormEvent } from 'react'
 import { toast } from 'react-toastify'
 
 import Socket, { SocketInterface } from 'Utils/Socket'

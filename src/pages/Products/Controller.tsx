@@ -1,4 +1,5 @@
-import React, { Component, ComponentType } from 'react'
+import * as React from 'react'
+import { Component, ComponentType } from 'react'
 
 export default <P extends object>(ProductComponent: ComponentType<P>) => class extends Component<P> {
   render() {

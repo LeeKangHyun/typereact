@@ -1,4 +1,5 @@
-import React, { Suspense, lazy } from 'react'
+import * as React from 'react'
+import { Suspense, lazy } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import styled, { createGlobalStyle } from 'styled-components'
 import { reset } from 'styled-reset'

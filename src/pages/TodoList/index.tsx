@@ -1,4 +1,5 @@
-import React, { Component, FormEvent } from 'react'
+import * as React from 'react'
+import { Component, FormEvent } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 

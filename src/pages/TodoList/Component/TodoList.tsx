@@ -1,4 +1,5 @@
-import React, { FC, ReactElement } from 'react'
+import * as React from 'react'
+import { FC, ReactElement } from 'react'
 
 import { InjectedTodoListProps } from 'pages/TodoList'
 
