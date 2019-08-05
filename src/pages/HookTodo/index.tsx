@@ -1,13 +1,14 @@
 import * as React from 'react'
+import { FunctionComponent } from 'react'
 
-import { GlobalStore } from './globalStore'
+import { TodoState, withContext } from './globalStore'
 
-const HookTodoComponent = () => {
-  return (
-    <GlobalStore>
-    
-    </GlobalStore>
+const HookTodoComponent: FunctionComponent = ({ appContext }: { appContext?: TodoState }) => {
+  return appContext && (
+    <div>
+      {JSON.stringify(appContext, null, 2)}
+    </div>
   )
 }
 
-export default HookTodoComponent
+export default withContext(HookTodoComponent)
