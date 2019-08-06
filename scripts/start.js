@@ -107,7 +107,7 @@ checkBrowsers(paths.appPath, isInteractive)
         console.log();
       }
 
-      console.log(chalk.cyan('Starting the development server...\n'));
+      console.log(chalk.cyan('개발서버 시작중...\n'));
     });
 
     ['SIGINT', 'SIGTERM'].forEach(function(sig) {

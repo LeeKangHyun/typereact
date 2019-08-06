@@ -9,4 +9,5 @@ const Compose = (...funcs: Function[]) => {
   
   return funcs.reduce((a: Function, b: Function) => (...args: Function[]) => a(b(...args)))
 }
+
 export default Compose

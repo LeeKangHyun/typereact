@@ -29,7 +29,6 @@ const ChatComponent: FC = () => {
   const onClickReConnect = useCallback(() => {
     const a = _socket.current.reconnect()
     console.log(a)
-    debugger
     toast("채팅 연결")
   }, [])
 
