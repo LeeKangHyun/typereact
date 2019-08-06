@@ -27,6 +27,28 @@ const render = (type: Chart) => {
     case 'bar':
       return (
         <BarComponent
+          data={[
+            {
+              "letter": "A",
+              "frequency": 0.08167,
+            },
+            {
+              "letter": "B",
+              "frequency": 0.01492,
+            },
+            {
+              "letter": "C",
+              "frequency": 0.02782,
+            },
+            {
+              "letter": "D",
+              "frequency": 0.04253,
+            },
+            {
+              "letter": "E",
+              "frequency": 0.12702,
+            },
+          ]}
           margin={{
             top: 10,
             right: 30,
@@ -44,12 +66,12 @@ const render = (type: Chart) => {
 
 const ChartComponent: FunctionComponent = () => {
   const [type, setType] = useState<Chart>('half_pie')
-  
+
   const onClick = useCallback((event: FormEvent<HTMLButtonElement>) => {
     const { name } = event.currentTarget
     setType((name as Chart))
   }, [])
-  
+
   return (
     <div>
       <ul>

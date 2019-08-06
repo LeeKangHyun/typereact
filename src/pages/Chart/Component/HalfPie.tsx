@@ -21,19 +21,19 @@ const HalfPieComponent: FunctionComponent<Props> = ({
 }) => {
   const svgRef = useRef<HTMLDivElement | null>(null)
   // const cache = useRef<number[]>(data)
-  
+
   // Settings
   const anglesRange = 0.5 * Math.PI
   const radis = Math.min(width, 2 * height) / 2
-  
+
   const pies = d3.pie().value( (d: number) => d).sort(null).startAngle(anglesRange * -1).endAngle(anglesRange)
   const arc = d3.arc().outerRadius(radis).innerRadius(radis - thickness)
   const tip = d3.select('body').append('div').attr('class', 'toolTip').style('position', 'absolute')
-  
+
   useEffect(() => {
     const translation = (x: number, y: number) => `translate(${x}, ${y})`
     const svg = d3.select(svgRef.current).append('svg').attr('width', width).attr('height', height).attr('class', 'half-donut').append('g').attr('transform', translation(width / 2, height))
-    
+
     const Scale = (datum: object, index: number, groups: SVGPathElement[]) => {
       if (!tooltip) return
       console.log(d3.event, d3.select(groups[index]))
@@ -49,7 +49,7 @@ const HalfPieComponent: FunctionComponent<Props> = ({
         `
       })
     }
-    
+
     svg.selectAll('path')
     .data(pies(data))
     .enter()
@@ -59,13 +59,13 @@ const HalfPieComponent: FunctionComponent<Props> = ({
     .on('mouseover', Scale)
     .on('mousemove', Scale)
     .on('mouseout', () => tip.style('display', 'none'))
-    
+
     return () => {
       svg.remove()
       tip.remove()
     }
-  }, [anglesRange, arc, colors, data, height, pies, radis, thickness, tip, width])
-  
+  }, [anglesRange, arc, colors, data, height, pies, radis, thickness, tip, tooltip, width])
+
   return (
     <Fragment>
       <div ref={svgRef} />
