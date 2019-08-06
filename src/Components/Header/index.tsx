@@ -24,11 +24,14 @@ const HeaderComponent: FC = () => {
         <Li>
           <Link to="/counter">카운터</Link>
         </Li>
-        <Li>
-          <Link to="/hook_todo">HookTodo</Link>
-        </Li>
+        {/*<Li>*/}
+        {/*  <Link to="/hook_todo">HookTodo</Link>*/}
+        {/*</Li>*/}
         <Li>
           <Link to="/todo">TodoList</Link>
+        </Li>
+        <Li>
+          <Link to="/chart">차트</Link>
         </Li>
         <Li>
           <Link to="/chat">채팅</Link>

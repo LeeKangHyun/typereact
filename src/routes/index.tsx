@@ -9,8 +9,9 @@ const Main = lazy(() => import(/* webpackChunkName: 'Main' */ 'pages/Main'))
 const Product = lazy(() => import(/* webpackChunkName: 'Product' */ 'pages/Products'))
 const Counter = lazy(() => import(/* webpackChunkName: 'Counter' */ 'pages/Counter'))
 const TodoList = lazy(() => import(/* webpackChunkName: 'TodoList' */ 'pages/TodoList'))
-const HookTodo = lazy(() => import(/* webpackChunkName: 'HookTodoList' */ 'pages/HookTodo'))
+// const HookTodo = lazy(() => import(/* webpackChunkName: 'HookTodoList' */ 'pages/HookTodo'))
 const Chat = lazy(() => import(/* webpackChunkName: 'Chat' */ 'pages/Chat'))
+const Chart = lazy(() => import(/* webpackChunkName: 'Chart' */ 'pages/Chart'))
 
 const Wrap = styled.div``
 
@@ -36,8 +37,9 @@ function AppRouter(): JSX.Element {
             <Route path="/products/:id" component={Product} />
             <Route path="/counter" component={Counter} />
             <Route path="/todo" component={TodoList} />
-            <Route path="/hook_todo" component={HookTodo} />
+            {/*<Route path="/hook_todo" component={HookTodo} />*/}
             <Route path="/chat" component={Chat} />
+            <Route path="/chart" component={Chart} />
             <Redirect to="/" />
           </Switch>
         </Wrap>
