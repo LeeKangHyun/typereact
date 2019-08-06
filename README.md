@@ -36,3 +36,4 @@
 1. [TypeScript-kr](https://typescript-kr.github.io)
 2. [https://infoscis.github.io](https://infoscis.github.io)
 3. [typescript-type과-interface-차이](https://medium.com/@alexsung/typescript-type과-interface-차이-86666e3e90c)
+4. [https://www.valentinog.com/blog/testing-react/](https://www.valentinog.com/blog/testing-react/)
