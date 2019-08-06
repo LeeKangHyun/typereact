@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { FC } from 'react'
+import { FunctionComponent } from 'react'
 import { compose } from 'redux'
 
 import withController from './Controller'
@@ -11,7 +11,7 @@ import {
 } from './styled'
 
 
-const HeaderComponent: FC = () => {
+const HeaderComponent: FunctionComponent = () => {
   return (
     <Header>
       <Ul>

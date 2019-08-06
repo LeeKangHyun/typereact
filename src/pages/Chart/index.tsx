@@ -1,16 +1,50 @@
 import * as React from 'react'
-import { FunctionComponent } from 'react'
+import {
+  useState, useCallback,
+  FunctionComponent, FormEvent,
+} from 'react'
 
 import HalfPieComponent from './Component/HalfPie'
 
+type Chart =
+  | 'half_pie'
+  | 'bar'
+
+const render = (type: Chart) => {
+  switch (type) {
+    case 'half_pie':
+      return (
+        <HalfPieComponent
+          thickness={60}
+          width={600}
+          height={300}
+          data={[0.45, 0.27, 0.27]}
+          colors={['#9a3dea', '#59cedb', '#484c9f']}
+        />
+      )
+    case 'bar':
+    default:
+      return (
+        <div />
+      )
+  }
+}
+
 const ChartComponent: FunctionComponent = () => {
+  const [type, setType] = useState<Chart>('half_pie')
+  
+  const onClick = useCallback((event: FormEvent<HTMLButtonElement>) => {
+    const { name } = event.currentTarget
+    setType((name as Chart))
+  }, [])
+  
   return (
     <div>
-      <HalfPieComponent
-        thickness={50}
-        data={[0.45, 0.27, 0.27]}
-        colors={['#9a3dea', '#59cedb', '#484c9f']}
-      />
+      <ul>
+        <li><button name="half_pie" onClick={onClick}>half_pie</button></li>
+        {/*<li><button name="bar" onClick={onClick}>bar</button></li>*/}
+      </ul>
+      {render(type)}
     </div>
   )
 }
