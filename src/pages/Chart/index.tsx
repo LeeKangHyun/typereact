@@ -7,6 +7,8 @@ import {
 import HalfPieComponent from './Component/HalfPie'
 import BarComponent from './Component/Bar'
 
+import { List } from './styled'
+
 type Chart =
   | 'half_pie'
   | 'bar'
@@ -74,10 +76,10 @@ const ChartComponent: FunctionComponent = () => {
 
   return (
     <div>
-      <ul>
+      <List>
         <li><button name="half_pie" onClick={onClick}>half_pie</button></li>
         <li><button name="bar" onClick={onClick}>bar</button></li>
-      </ul>
+      </List>
       {render(type)}
     </div>
   )
