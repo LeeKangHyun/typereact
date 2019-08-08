@@ -65,7 +65,7 @@ const render = (type: Chart) => {
 }
 
 const ChartComponent: FunctionComponent = () => {
-  const [type, setType] = useState<Chart>('half_pie')
+  const [type, setType] = useState<Chart>('bar')
 
   const onClick = useCallback((event: FormEvent<HTMLButtonElement>) => {
     const { name } = event.currentTarget

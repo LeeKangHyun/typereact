@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { FunctionComponent, useEffect, useRef } from 'react'
+import { useEffect, useRef, FunctionComponent } from 'react'
 import * as d3 from 'd3'
 
 interface Margin {
@@ -9,7 +9,7 @@ interface Margin {
   left: number
 }
 
-interface D {
+interface Data {
   letter: string
   frequency: number
 }
@@ -18,7 +18,7 @@ interface Props {
   width?: number
   height?: number
   margin: Margin
-  data: D[]
+  data: Data[]
 }
 
 const BarComponent: FunctionComponent<Props> = ({
@@ -37,15 +37,15 @@ const BarComponent: FunctionComponent<Props> = ({
 
     // X axis
     const x = d3.scaleBand().rangeRound([0, mWidth]).padding(0.1)
+    x.domain(data.map(function(d) { return d.letter }))
+
     // Y axis
     const y = d3.scaleLinear().rangeRound([mHeight, 0])
+    y.domain([0, d3.max(data, d => d.frequency) as number])
+
     // g
     const g = svg.append('g')
     .attr('transform', `translate(${margin.left}, ${margin.top})`)
-
-    x.domain(data.map(function(d) { return d.letter }))
-    // @ts-ignore
-    y.domain([0, d3.max(data, function(d) { return d.frequency })])
 
     g.append('g')
     .attr('transform', `translate(0, ${mHeight})`)
@@ -59,18 +59,15 @@ const BarComponent: FunctionComponent<Props> = ({
     .enter()
     .append('rect')
     .attr('class', 'bar')
-    // @ts-ignore
-    .attr("x", function(d) {return x(d.letter) })
-    // @ts-ignore
-    .attr("y", function(d) { return y(d.frequency) })
+    .attr("x", d => x(d.letter) as number)
+    .attr("y", d => y(d.frequency))
     .attr("width", x.bandwidth())
-    // @ts-ignore
-    .attr("height", function(d) { return mHeight - y(d.frequency) })
+    .attr("height", d => mHeight - y(d.frequency))
 
     return () => {
       svg.remove()
     }
-  }, [])
+  }, [data, mHeight, mWidth, margin.bottom, margin.left, margin.right, margin.top])
 
   return (
     <div ref={svgRef} />
