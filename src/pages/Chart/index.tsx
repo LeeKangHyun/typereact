@@ -6,12 +6,14 @@ import {
 
 import HalfPieComponent from './Component/HalfPie'
 import BarComponent from './Component/Bar'
+import GroupBarComponent from './Component/GroupBar'
 
 import { List } from './styled'
 
 type Chart =
   | 'half_pie'
   | 'bar'
+  | 'group_bar'
 
 const render = (type: Chart) => {
   switch (type) {
@@ -59,6 +61,10 @@ const render = (type: Chart) => {
           }}
         />
       )
+    case 'group_bar':
+      return (
+        <GroupBarComponent />
+      )
     default:
       return (
         <div />
@@ -68,10 +74,15 @@ const render = (type: Chart) => {
 
 const ChartComponent: FunctionComponent = () => {
   const [type, setType] = useState<Chart>('bar')
+  const [isLoading, setLoading] = useState(false)
 
-  const onClick = useCallback((event: FormEvent<HTMLButtonElement>) => {
+  const onClick = useCallback(async (event: FormEvent<HTMLButtonElement>) => {
     const { name } = event.currentTarget
-    setType((name as Chart))
+    await setLoading(true)
+
+    await setType((name as Chart))
+
+    await setLoading(false)
   }, [])
 
   return (
@@ -79,8 +90,13 @@ const ChartComponent: FunctionComponent = () => {
       <List>
         <li><button name="half_pie" onClick={onClick}>half_pie</button></li>
         <li><button name="bar" onClick={onClick}>bar</button></li>
+        <li><button name="group_bar" onClick={onClick}>group_bar</button></li>
       </List>
-      {render(type)}
+      {!isLoading ? (
+        render(type)
+      ) : (
+        <div>Loading...</div>
+      )}
     </div>
   )
 }

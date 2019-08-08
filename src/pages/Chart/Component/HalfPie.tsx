@@ -1,8 +1,7 @@
 import * as React from 'react'
 import {
-  Fragment,
-  FunctionComponent,
   useEffect, useRef,
+  FunctionComponent,
 } from 'react'
 import * as d3 from 'd3'
 
@@ -67,9 +66,7 @@ const HalfPieComponent: FunctionComponent<Props> = ({
   }, [anglesRange, arc, colors, data, height, pies, radis, thickness, tip, tooltip, width])
 
   return (
-    <Fragment>
-      <div ref={svgRef} />
-    </Fragment>
+    <div ref={svgRef} />
   )
 }
 
