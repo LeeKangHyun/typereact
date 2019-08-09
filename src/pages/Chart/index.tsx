@@ -64,6 +64,19 @@ const render = (type: Chart) => {
     case 'group_bar':
       return (
         <GroupBarComponent
+          data={[
+            {
+              label: 'jan',
+              
+            }
+          ]}
+          xAxis="group"
+          yAxis=""
+          color={[
+            '#e41a1c',
+            '#377eb8',
+            '#4daf4a',
+          ]}
           margin={{
             top: 10,
             right: 30,
