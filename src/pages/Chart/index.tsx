@@ -63,7 +63,14 @@ const render = (type: Chart) => {
       )
     case 'group_bar':
       return (
-        <GroupBarComponent />
+        <GroupBarComponent
+          margin={{
+            top: 10,
+            right: 30,
+            bottom: 30,
+            left: 40
+          }}
+        />
       )
     default:
       return (
