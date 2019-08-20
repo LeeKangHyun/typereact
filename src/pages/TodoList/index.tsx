@@ -3,8 +3,8 @@ import { Component, FormEvent } from 'react'
 import { compose, bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { TodoItemDataParams, actionCreators as todosActions } from 'store/modules/Todos'
 import { StoreState } from 'store/modules'
+import { TodoItemDataParams, actionCreators as todosActions } from 'store/modules/Todos'
 
 import TodoListComponent from './Component/TodoList'
 
@@ -29,26 +29,26 @@ class TodoList extends Component<Props> {
     const { TodosActions, input } = this.props
     TodosActions.create(input)
   }
-  
+
   onChange = (event: FormEvent<HTMLInputElement>) => {
     const { value } = event.currentTarget
     if (value === '') return
-    
+
     const { TodosActions } = this.props
     TodosActions.changeInput(value)
   }
-  
-  
+
+
   onToggle = (id: number) => {
     const { TodosActions } = this.props
     TodosActions.toggle(id)
   }
-  
+
   onRemove = (id: number) => {
     const { TodosActions } = this.props
     TodosActions.remove(id)
   }
-  
+
   render() {
     const { todoItems, input } = this.props
     return (

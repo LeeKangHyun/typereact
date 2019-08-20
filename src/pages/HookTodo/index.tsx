@@ -1,36 +1,26 @@
 import * as React from 'react'
-import { FormEvent, FunctionComponent } from 'react'
+import { FunctionComponent } from 'react'
 
-import useGlobal, { actionCreators, TodoItemDataParams } from './globalStore'
+import { TodoItemDataParams } from 'store/modules/Todos'
+import useTodoReducer, { UseEvents } from './Hooks/useTodoReducer'
+
 import HookTodoListComponent from './Component/HookTodoList'
 
-export interface InjectedTodoListProps {
+export interface InjectedTodoListProps extends UseEvents{
   input: string
   todoItems: TodoItemDataParams[]
-
-  onCreate(event: FormEvent<HTMLFormElement>): void
-  onChange(event: FormEvent<HTMLInputElement>): void
-  onToggle(id: number): void
-  onRemove(id: number): void
 }
 
 const HookTodoComponent: FunctionComponent = () => {
-  const [state, dispatch] = useGlobal()
-
-  const onCreate = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
-    const { input } = state
-    return dispatch(actionCreators.create(input))
-  }
-
-  const onToggle = (id: number) => dispatch(actionCreators.toggle(id))
-
-  const onChange = (event: FormEvent<HTMLInputElement>) => {
-    const { value } = event.currentTarget
-    return dispatch(actionCreators.changeInput(value))
-  }
-
-  const onRemove = (id: number) => dispatch(actionCreators.remove(id))
+  const [
+    state,
+    {
+      onCreate,
+      onToggle,
+      onRemove,
+      onChange,
+    }
+  ] = useTodoReducer()
 
   return (
     <HookTodoListComponent

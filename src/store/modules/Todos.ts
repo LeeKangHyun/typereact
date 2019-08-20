@@ -48,7 +48,7 @@ export type TodoActionTypes =
 
 let autoId = 0
 
-function create(text: string) {
+function create(text: string): TodoActionTypes {
   return {
     type: CREATE,
     payload: {
@@ -59,7 +59,7 @@ function create(text: string) {
   }
 }
 
-function remove(id: number) {
+function remove(id: number): TodoActionTypes {
   return {
     type: REMOVE,
     meta: {
@@ -68,7 +68,7 @@ function remove(id: number) {
   }
 }
 
-function toggle(id: number) {
+function toggle(id: number): TodoActionTypes {
   return {
     type: TOGGLE,
     meta: {
@@ -77,7 +77,7 @@ function toggle(id: number) {
   }
 }
 
-function changeInput(input: string) {
+function changeInput(input: string): TodoActionTypes {
   return {
     type: CHANGE_INPUT,
     meta: {
