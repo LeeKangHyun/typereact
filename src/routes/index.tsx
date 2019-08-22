@@ -34,7 +34,7 @@ function AppRouter(): JSX.Element {
           <Header />
           <Switch>
             <Route path="/" component={Main} exact />
-            <Route path="/products/:id" component={Product} />
+            <Route path="/products/:id?" component={Product} />
             <Route path="/counter" component={Counter} />
             <Route path="/todo" component={TodoList} />
             <Route path="/hook_todo" component={HookTodo} />
